@@ -3,17 +3,17 @@ import { fontConfig } from "./fontConfig";
 
 // 定义站点语言
 // 语言代码，例如：'zh_CN', 'zh_TW', 'en', 'ja', 'ru'。
-const SITE_LANG = "zh_CN";
+const SITE_LANG = "en";
 
 export const siteConfig: SiteConfig = {
 	// 站点标题
-	title: "Firefly",
+	title: "Vanutama Menulis",
 
 	// 站点副标题
-	subtitle: "Demo site",
+	subtitle: "Personal Blog",
 
 	// 站点 URL
-	site_url: "https://firefly.cuteleaf.cn",
+	site_url: "https://vanutamamenulis.pages.dev",
 
 	// 站点描述
 	description:
