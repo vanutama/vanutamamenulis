@@ -61,7 +61,7 @@ export const siteConfig: SiteConfig = {
 		// { type: "image", value: "https://example.com/logo.png", alt: "Firefly Logo" }
 		logo: {
 			type: "icon",
-			value: "material-symbols:edit-outline ",
+			value: "material-symbols:home-pin-outline",
 		},
 		// 导航栏标题
 		title: "Vanutama Menulis",
