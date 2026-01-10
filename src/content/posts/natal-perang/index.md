@@ -76,7 +76,7 @@ Pelayanan Yesus adalah kampanye militer aktif untuk merebut wilayah dari kerajaa
 - Ia mengusir setan-setan dengan otoritas langsung (Markus 1:21-28; 5:1-20) dan membebaskan tawanan dan merebut wilayah musuh. Setiap pengusiran setan adalah kemenangan taktis dalam perang yang lebih besar.
 - Ia melatih dan memberdayakan murid-murid-Nya (Lukas 9:1-2; 10:17-20), mendelegasikan otoritas kepada mereka untuk mengusir setan dan menyembuhkan, ini melipatgandakan pasukan pembebasan.
 
-## ✝️ Salib dan Kebangkitan: Kemenangan Penuh Melalui Paradoks**
+## ✝️ Salib dan Kebangkitan: Kemenangan Penuh Melalui Paradoks
 
 Di kayu salib, pertempuran yang menentukan dimenangkan melalui cara yang paling paradoks: kemenangan melalui kekalahan, kehidupan melalui kematian, kemuliaan melalui penderitaan.
 
