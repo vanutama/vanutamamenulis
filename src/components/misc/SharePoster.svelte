@@ -431,10 +431,6 @@ async function generatePoster() {
 		ctx.font = `${12 * scale}px 'Roboto', sans-serif`;
 		ctx.fillText(i18n(I18nKey.scanToRead), siteInfoX, textCenterY - 20 * scale);
 
-		ctx.fillStyle = "#1f2937";
-		ctx.font = `700 ${20 * scale}px 'Roboto', sans-serif`;
-		ctx.fillText(siteTitle, siteInfoX, textCenterY + 4 * scale);
-
 		// Finalize
 		posterImage = canvas.toDataURL("image/png");
 		generating = false;
