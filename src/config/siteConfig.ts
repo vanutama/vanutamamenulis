@@ -32,17 +32,23 @@ export const siteConfig: SiteConfig = {
     defaultMode: "dark",
   },
 
-  // Favicon 配置
-  favicon: [
-    {
-      // 图标文件路径
-      src: "/assets/images/favicon.ico",
-      // 可选，指定主题 'light' | 'dark'
-      // theme: "light",
-      // 可选，图标大小
-      // sizes: "32x32",
-    },
-  ],
+	// 网站Card样式配置
+	card: {
+		// 是否开启卡片边框和阴影，开启后让网站更有立体感
+		border: true,
+	},
+
+	// Favicon 配置
+	favicon: [
+		{
+			// 图标文件路径
+			src: "/assets/images/favicon.ico",
+			// 可选，指定主题 'light' | 'dark'
+			// theme: "light",
+			// 可选，图标大小
+			// sizes: "32x32",
+		},
+	],
 
   // 导航栏配置
   navbar: {
