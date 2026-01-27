@@ -1,5 +1,5 @@
 
-<img src="./images/1131.png" width = "405" height = "511" alt="Firefly" align=right />
+<img src="./images/1131.png" width = "320" height = "500" alt="Firefly" align=right />
 
 <div align="center">
 
@@ -8,7 +8,7 @@
 > 
 > ![Node.js >= 22](https://img.shields.io/badge/node.js-%3E%3D22-brightgreen) 
 ![pnpm >= 9](https://img.shields.io/badge/pnpm-%3E%3D9-blue)
-![Astro](https://img.shields.io/badge/Astro-5.16.8-orange)
+![Astro](https://img.shields.io/badge/Astro-5.16.15-orange)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.9.2-blue)
 >
 > [![Stars](https://img.shields.io/github/stars/CuteLeaf/Firefly?style=social)](https://github.com/CuteLeaf/Firefly/stargazers)
@@ -31,7 +31,7 @@
 [**🍀私のブログ**](https://blog.cuteleaf.cn)
 
 📖 README：
-**[简体中文](../README.md)** | **[繁體中文](README.zh-TW.md)** | **[English](../README.en.md)** | **[日本語](README.ja.md)** | **[Русский](README.ru.md)** 
+**[简体中文](../README.zh.md)** | **[繁體中文](README.zh-TW.md)** | **[English](../README.md)** | **[日本語](README.ja.md)** | **[Русский](README.ru.md)** 
 
 ⚡ 静的サイト生成：Astroベースの超高速読み込み速度とSEO最適化
 
