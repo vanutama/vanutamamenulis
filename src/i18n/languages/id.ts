@@ -2,38 +2,251 @@ import Key from "../i18nKey";
 import type { Translation } from "../translation";
 
 export const id: Translation = {
-  [Key.home]: "Home",
+  [Key.home]: "Beranda",
   [Key.about]: "Tentang",
   [Key.archive]: "Arsip",
   [Key.search]: "Cari",
-  [Key.searchNoResults]: "No results found.",
-  [Key.searchTypeSomething]: "Type something to search...",
-  [Key.searchLoading]: "Searching...",
-  [Key.searchSummary]: "Summary",
-  [Key.searchContent]: "Content",
-  [Key.searchViewMore]: "View more results ({count} more)",
-  [Key.other]: "Other",
-  [Key.all]: "All",
+  [Key.searchNoResults]: "Tidak ada hasil yang ditemukan.",
+  [Key.searchTypeSomething]: "Ketik sesuatu untuk mencari...",
+  [Key.searchLoading]: "Mencari...",
+  [Key.searchSummary]: "Ringkasan",
+  [Key.searchContent]: "Konten",
+  [Key.searchViewMore]: "Lihat hasil lainnya ({count} lagi)",
+  [Key.other]: "Lainnya",
+  [Key.all]: "Semua",
 
-  [Key.tags]: "Tags",
+  [Key.tags]: "Tag",
   [Key.categories]: "Kategori",
-  [Key.recentPosts]: "Recent Posts",
-  [Key.postList]: "Post List",
+  [Key.recentPosts]: "Postingan Terbaru",
+  [Key.postList]: "Daftar Postingan",
   [Key.tableOfContents]: "Daftar Isi",
 
   // Announcement
-  [Key.announcement]: "Announcement",
-  [Key.announcementClose]: "Close",
+  [Key.announcement]: "Pengumuman",
+  [Key.announcementClose]: "Tutup",
 
-  [Key.comments]: "Comments",
-  [Key.commentSection]: "Comments",
-  [Key.commentSubtitle]: "Share your thoughts and discuss with everyone",
-  [Key.commentNotConfigured]: "Comment system not configured",
+  [Key.comments]: "Komentar",
+  [Key.commentSection]: "Komentar",
+  [Key.commentSubtitle]: "Bagikan pemikiran Anda dan diskusikan dengan semua orang",
+  [Key.commentNotConfigured]: "Sistem komentar belum dikonfigurasi",
   [Key.guestbookCommentHint]:
-    "You have not enabled the comment system in the configuration file yet. After enabling it, visitors will be able to leave messages here",
-  [Key.friends]: "Friends",
+    "Anda belum mengaktifkan sistem komentar di file konfigurasi. Setelah mengaktifkannya, pengunjung akan dapat meninggalkan pesan di sini",
+  [Key.friends]: "Teman",
   [Key.friendsDescription]:
-    "Here are my friends, welcome to visit and communicate with each other",
+    "Berikut adalah teman-teman saya, selamat berkunjung dan berkomunikasi satu sama lain",
+  [Key.guestbook]: "Buku Tamu",
+  [Key.guestbookDescription]:
+    "Selamat meninggalkan jejak Anda di sini, bagikan pemikiran dan saran Anda",
+  [Key.untitled]: "Tanpa Judul",
+  [Key.uncategorized]: "Tanpa Kategori",
+  [Key.noTags]: "Tanpa Tag",
+
+  [Key.wordCount]: "kata",
+  [Key.wordsCount]: "kata",
+  [Key.minuteCount]: "menit",
+  [Key.minutesCount]: "menit",
+  [Key.postCount]: "postingan",
+  [Key.postsCount]: "postingan",
+
+  [Key.themeColor]: "Warna Tema",
+
+  [Key.lightMode]: "Terang",
+  [Key.darkMode]: "Gelap",
+  [Key.systemMode]: "Sistem",
+
+  [Key.more]: "Selengkapnya",
+
+  [Key.author]: "Penulis",
+  [Key.publishedAt]: "Dipublikasikan pada",
+  [Key.license]: "Lisensi",
+  [Key.bangumi]: "Bangumi",
+
+  // Bangumi Filter and Status Text
+  [Key.bangumiTitle]: "Bangumi Saya",
+  [Key.bangumiSubtitle]: "Catat perjalanan ACG saya",
+  [Key.bangumiFilterAll]: "Semua",
+  [Key.bangumiFilterWatched]: "Sudah Ditonton",
+  [Key.bangumiFilterWatching]: "Sedang Ditonton",
+  [Key.bangumiFilterWish]: "Ingin Ditonton",
+  [Key.bangumiFilterOnHold]: "Ditunda",
+  [Key.bangumiFilterDropped]: "Dibatalkan",
+  [Key.bangumiFilterGamePlayed]: "Sudah Dimainkan",
+  [Key.bangumiFilterGamePlaying]: "Sedang Dimainkan",
+  [Key.bangumiFilterGameWish]: "Ingin Dimainkan",
+  [Key.bangumiFilterBookRead]: "Sudah Dibaca",
+  [Key.bangumiFilterBookReading]: "Sedang Dibaca",
+  [Key.bangumiFilterBookWish]: "Ingin Dibaca",
+  [Key.bangumiFilterMusicListened]: "Sudah Didengar",
+  [Key.bangumiFilterMusicListening]: "Sedang Didengar",
+  [Key.bangumiFilterMusicWish]: "Ingin Didengar",
+  [Key.bangumiStatusWish]: "Ingin Ditonton",
+  [Key.bangumiStatusWatched]: "Sudah Ditonton",
+  [Key.bangumiStatusWatching]: "Sedang Ditonton",
+  [Key.bangumiStatusOnHold]: "Ditunda",
+  [Key.bangumiStatusDropped]: "Dibatalkan",
+  [Key.bangumiStatusGameWish]: "Ingin Dimainkan",
+  [Key.bangumiStatusGamePlayed]: "Sudah Dimainkan",
+  [Key.bangumiStatusGamePlaying]: "Sedang Dimainkan",
+  [Key.bangumiStatusBookWish]: "Ingin Dibaca",
+  [Key.bangumiStatusBookRead]: "Sudah Dibaca",
+  [Key.bangumiStatusBookReading]: "Sedang Dibaca",
+  [Key.bangumiStatusMusicWish]: "Ingin Didengar",
+  [Key.bangumiStatusMusicListened]: "Sudah Didengar",
+  [Key.bangumiStatusMusicListening]: "Sedang Didengar",
+  [Key.bangumiStatusUnknown]: "Tidak Diketahui",
+  [Key.bangumiNoData]: "Tidak Ada Data",
+  [Key.bangumiNoDataDescription]: "Tidak ada item dalam kategori ini",
+  [Key.bangumiEmpty]: "Tidak Ada Data",
+  [Key.bangumiEmptyReason]:
+    "Kemungkinan alasan: username tidak ada, masalah koneksi jaringan, atau batas API",
+  [Key.bangumiUsername]: "Nama Pengguna",
+  [Key.bangumiApi]: "API",
+  [Key.bangumiConfigTip]:
+    "Tips: Silakan atur nama pengguna Bangumi yang benar di konfigurasi halaman",
+  [Key.bangumiPrevPage]: "Sebelumnya",
+  [Key.bangumiNextPage]: "Selanjutnya",
+  [Key.bangumiCurrentPage]: "Halaman",
+  [Key.bangumiTotalPages]: "dari",
+  [Key.bangumiPage]: "halaman",
+
+  // Bangumi Categories
+  [Key.bangumiCategoryBook]: "Buku",
+  [Key.bangumiCategoryAnime]: "Anime",
+  [Key.bangumiCategoryMusic]: "Musik",
+  [Key.bangumiCategoryGame]: "Game",
+  [Key.bangumiCategoryReal]: "Real",
+
+  // Bangumi Data Update
+  [Key.bangumiLastUpdated]: "Data diperbarui pada",
+  [Key.bangumiUpdatedAt]: "Waktu build",
+  [Key.bangumiDataStatic]: "Data statis",
+
+  // Pagination
+  [Key.paginationFirst]: "Pertama",
+  [Key.paginationPrev]: "Sebelumnya",
+  [Key.paginationNext]: "Selanjutnya",
+  [Key.paginationLast]: "Terakhir",
+  [Key.paginationPage]: "Halaman",
+  [Key.paginationOf]: "dari",
+  [Key.paginationTotal]: ", Total",
+  [Key.paginationRecords]: " catatan",
+
+  // 404 Page
+  [Key.notFound]: "404",
+  [Key.notFoundTitle]: "Halaman Tidak Ditemukan",
+  [Key.notFoundDescription]:
+    "Maaf, halaman yang Anda kunjungi tidak ada atau telah dipindahkan.",
+  [Key.backToHome]: "Kembali ke Beranda",
+
+  // RSS Page
+  [Key.rss]: "RSS Feed",
+  [Key.rssDescription]: "Berlangganan untuk mendapatkan pembaruan terbaru",
+  [Key.rssSubtitle]:
+    "Berlangganan melalui RSS untuk mendapatkan artikel dan pembaruan terbaru secara langsung",
+  [Key.rssLink]: "Tautan RSS",
+  [Key.rssCopyToReader]: "Salin tautan ke pembaca RSS Anda",
+  [Key.rssCopyLink]: "Salin Tautan",
+  [Key.rssLatestPosts]: "Postingan Terbaru",
+  [Key.rssWhatIsRSS]: "Apa itu RSS?",
+  [Key.rssWhatIsRSSDescription]:
+    "RSS (Really Simple Syndication) adalah format standar untuk mempublikasikan konten yang sering diperbarui. Dengan RSS, Anda dapat:",
+  [Key.rssBenefit1]:
+    "Mendapatkan konten website terbaru tepat waktu tanpa harus mengunjungi secara manual",
+  [Key.rssBenefit2]: "Mengelola langganan ke berbagai website dalam satu tempat",
+  [Key.rssBenefit3]: "Menghindari kehilangan pembaruan dan artikel penting",
+  [Key.rssBenefit4]: "Menikmati pengalaman membaca yang bersih tanpa iklan",
+  [Key.rssHowToUse]:
+    "Disarankan menggunakan Feedly, Inoreader atau pembaca RSS lainnya untuk berlangganan situs ini.",
+  [Key.rssCopied]: "Tautan RSS disalin ke clipboard!",
+  [Key.rssCopyFailed]: "Gagal menyalin, silakan salin tautan secara manual",
+
+  // Last Modified Time Card
+  [Key.lastModifiedPrefix]: "Terakhir diperbarui pada ",
+  [Key.lastModifiedOutdated]: "Beberapa konten mungkin sudah usang",
+  [Key.lastModifiedDaysAgo]: "{days} hari yang lalu",
+  [Key.year]: "tahun",
+  [Key.month]: "bulan",
+  [Key.day]: "hari",
+  [Key.hour]: "jam",
+  [Key.minute]: "menit",
+  [Key.second]: "detik",
+
+  // Page Views Statistics
+  [Key.pageViews]: "Dilihat",
+  [Key.pageViewsLoading]: "Memuat...",
+  [Key.pageViewsError]: "Statistik tidak tersedia",
+
+  // Pinned
+  [Key.pinned]: "Disematkan",
+
+  // Wallpaper Mode
+  [Key.wallpaperMode]: "Mode Wallpaper",
+  [Key.wallpaperBannerMode]: "Wallpaper Banner",
+  [Key.wallpaperOverlayMode]: "Transparan",
+  [Key.wallpaperNoneMode]: "Latar Belakang Warna Solid",
+
+  // Sponsor Page
+  [Key.sponsor]: "Sponsor",
+  [Key.sponsorTitle]: "Dukung Saya",
+  [Key.sponsorDescription]:
+    "Jika konten saya bermanfaat bagi Anda, Anda dapat mendukung saya melalui metode berikut. Dukungan Anda adalah dorongan untuk terus berkarya!",
+  [Key.sponsorMethods]: "Metode Pembayaran",
+  [Key.sponsorList]: "Sponsor",
+  [Key.sponsorEmpty]: "Belum ada sponsor",
+  [Key.sponsorAmount]: "Jumlah",
+  [Key.sponsorDate]: "Tanggal",
+  [Key.sponsorMessage]: "Pesan",
+  [Key.sponsorAnonymous]: "Anonim",
+  [Key.scanToSponsor]: "Pindai untuk Sponsor",
+  [Key.sponsorGoTo]: "Kunjungi Sponsor",
+  [Key.sponsorButton]: "Dukung & Bagikan",
+  [Key.sponsorButtonText]:
+    "Jika artikel ini membantu Anda, silakan bagikan atau dukung!",
+
+  [Key.shareOnSocial]: "Bagikan Artikel",
+  [Key.shareOnSocialDescription]:
+    "Jika artikel ini membantu Anda, silakan bagikan kepada orang lain!",
+
+  // Site Statistics
+  [Key.siteStats]: "Statistik Situs",
+  [Key.siteStatsPostCount]: "Postingan",
+  [Key.siteStatsCategoryCount]: "Kategori",
+  [Key.siteStatsTagCount]: "Tag",
+  [Key.siteStatsTotalWords]: "Total Kata",
+  [Key.siteStatsRunningDays]: "Hari Berjalan",
+  [Key.siteStatsLastUpdate]: "Aktivitas Terakhir",
+  [Key.siteStatsDaysAgo]: "{days} hari yang lalu",
+  [Key.siteStatsDays]: "{days} hari",
+  [Key.today]: "Hari Ini",
+
+  // Calendar Component
+  [Key.calendarSunday]: "Min",
+  [Key.calendarMonday]: "Sen",
+  [Key.calendarTuesday]: "Sel",
+  [Key.calendarWednesday]: "Rab",
+  [Key.calendarThursday]: "Kam",
+  [Key.calendarFriday]: "Jum",
+  [Key.calendarSaturday]: "Sab",
+  [Key.calendarJanuary]: "Jan",
+  [Key.calendarFebruary]: "Feb",
+  [Key.calendarMarch]: "Mar",
+  [Key.calendarApril]: "Apr",
+  [Key.calendarMay]: "Mei",
+  [Key.calendarJune]: "Jun",
+  [Key.calendarJuly]: "Jul",
+  [Key.calendarAugust]: "Agu",
+  [Key.calendarSeptember]: "Sep",
+  [Key.calendarOctober]: "Okt",
+  [Key.calendarNovember]: "Nov",
+  [Key.calendarDecember]: "Des",
+
+  [Key.shareArticle]: "Bagikan",
+  [Key.generatingPoster]: "Membuat Poster...",
+  [Key.copied]: "Disalin",
+  [Key.copyLink]: "Salin Tautan",
+  [Key.savePoster]: "Simpan Poster",
+  [Key.scanToRead]: "Pindai untuk Membaca",
+};
   [Key.guestbook]: "Guestbook",
   [Key.guestbookDescription]:
     "Welcome to leave your mark here, share your thoughts and suggestions",
