@@ -2,7 +2,7 @@ import Key from "../i18nKey";
 import type { Translation } from "../translation";
 
 export const id: Translation = {
-  [Key.home]: "Home",
+  [Key.home]: "Beranda",
   [Key.about]: "Tentang",
   [Key.archive]: "Arsip",
   [Key.search]: "Cari",
@@ -210,14 +210,14 @@ export const id: Translation = {
   // Site Statistics
   [Key.siteStats]: "Site Statistics",
   [Key.siteStatsPostCount]: "Posts",
-  [Key.siteStatsCategoryCount]: "Categories",
+  [Key.siteStatsCategoryCount]: "Kategori",
   [Key.siteStatsTagCount]: "Tags",
   [Key.siteStatsTotalWords]: "Total Words",
   [Key.siteStatsRunningDays]: "Running Days",
-  [Key.siteStatsLastUpdate]: "Last Activity",
-  [Key.siteStatsDaysAgo]: "{days} days ago",
-  [Key.siteStatsDays]: "{days} days",
-  [Key.today]: "Today",
+  [Key.siteStatsLastUpdate]: "Aktivitas Terakhir",
+  [Key.siteStatsDaysAgo]: "{days} hari lalu",
+  [Key.siteStatsDays]: "{days} hari",
+  [Key.today]: "Hari ini",
 
   // Calendar Component
   [Key.calendarSunday]: "Sun",
