@@ -3,7 +3,6 @@ import type I18nKey from "./i18nKey";
 import { en } from "./languages/en";
 import { ja } from "./languages/ja";
 import { ru } from "./languages/ru";
-import { id } from "./languages/id";
 import { zh_CN } from "./languages/zh_CN";
 import { zh_TW } from "./languages/zh_TW";
 
@@ -24,7 +23,6 @@ const map: { [key: string]: Translation } = {
   ja_jp: ja,
   ru: ru,
   ru_ru: ru,
-  id: id,
 };
 
 export function getTranslation(lang: string): Translation {
@@ -32,17 +30,17 @@ export function getTranslation(lang: string): Translation {
 }
 
 export function i18n(key: I18nKey): string {
-	const lang = siteConfig.lang || "en";
-	const currentLang = getTranslation(lang);
-	const value = currentLang[key];
+  const lang = siteConfig.lang || "en";
+  const currentLang = getTranslation(lang);
+  const value = currentLang[key];
 
-	// 如果当前语言没有翻译（或为空），则使用中文作为备选
-	if (!value && lang.toLowerCase() !== "zh_cn") {
-		const chineseValue = zh_CN[key];
-		if (chineseValue) {
-			return chineseValue;
-		}
-	}
+  // 如果当前语言没有翻译（或为空），则使用中文作为备选
+  if (!value && lang.toLowerCase() !== "zh_cn") {
+    const chineseValue = zh_CN[key];
+    if (chineseValue) {
+      return chineseValue;
+    }
+  }
 
-	return value || defaultTranslation[key];
+  return value || defaultTranslation[key];
 }
