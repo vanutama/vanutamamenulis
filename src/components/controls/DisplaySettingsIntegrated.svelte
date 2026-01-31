@@ -32,6 +32,9 @@ let isSwitching = $state(false);
 
 const isWallpaperSwitchable = backgroundWallpaper.switchable ?? true;
 const allowLayoutSwitch = siteConfig.postListLayout.allowSwitch;
+const showThemeColor = !siteConfig.themeColor.fixed;
+const hasAnyContent =
+	showThemeColor || isWallpaperSwitchable || allowLayoutSwitch;
 
 function resetHue() {
 	hue = getDefaultHue();
@@ -128,9 +131,11 @@ $effect(() => {
 });
 </script>
 
-<div id="display-setting" class="float-panel float-panel-closed absolute transition-all w-80 right-4 px-4 py-4">
+{#if hasAnyContent}
+<div id="display-setting" class="float-panel float-panel-closed absolute transition-all w-80 right-4 px-4 py-2">
     <!-- Theme Color Section -->
-    <div class="flex flex-row gap-2 mb-2 items-center justify-between">
+    {#if showThemeColor}
+    <div class="flex flex-row gap-2 mt-2 mb-2 items-center justify-between">
         <div class="flex gap-2 font-bold text-lg text-neutral-900 dark:text-neutral-100 transition relative ml-3
             before:w-1 before:h-4 before:rounded-md before:bg-[var(--primary)]
             before:absolute before:-left-3 before:top-1/2 before:-translate-y-1/2"
@@ -154,10 +159,11 @@ $effect(() => {
         <input aria-label={i18n(I18nKey.themeColor)} type="range" min="0" max="360" bind:value={hue}
                class="slider" id="colorSlider" step="5" style="width: 100%">
     </div>
+    {/if}
 
     <!-- Wallpaper Mode Section -->
     {#if isWallpaperSwitchable}
-        <div class="mt-2">
+        <div class="mt-2 mb-2">
             <div class="flex gap-2 font-bold text-lg text-neutral-900 dark:text-neutral-100 transition relative ml-3 mb-2
                 before:w-1 before:h-4 before:rounded-md before:bg-[var(--primary)]
                 before:absolute before:-left-3 before:top-1/2 before:-translate-y-1/2"
@@ -173,9 +179,8 @@ $effect(() => {
             <div class="space-y-1 px-1">
                 <button
                     class="w-full btn-regular rounded-md py-2 px-3 flex items-center gap-3 text-left active:scale-95 transition-all relative overflow-hidden"
-                    class:ring-1={wallpaperMode === WALLPAPER_BANNER}
-                    class:ring-[var(--primary)]={wallpaperMode === WALLPAPER_BANNER}
                     class:opacity-60={wallpaperMode !== WALLPAPER_BANNER}
+                    class:bg-[var(--btn-regular-bg-hover)]={wallpaperMode === WALLPAPER_BANNER}
                     onclick={() => switchWallpaperMode(WALLPAPER_BANNER)}
                 >
                     <Icon icon="material-symbols:image-outline" class="text-[1.25rem] flex-shrink-0"></Icon>
@@ -186,9 +191,8 @@ $effect(() => {
                 </button>
                 <button
                     class="w-full btn-regular rounded-md py-2 px-3 flex items-center gap-3 text-left active:scale-95 transition-all relative overflow-hidden"
-                    class:ring-1={wallpaperMode === WALLPAPER_OVERLAY}
-                    class:ring-[var(--primary)]={wallpaperMode === WALLPAPER_OVERLAY}
                     class:opacity-60={wallpaperMode !== WALLPAPER_OVERLAY}
+                    class:bg-[var(--btn-regular-bg-hover)]={wallpaperMode === WALLPAPER_OVERLAY}
                     onclick={() => switchWallpaperMode(WALLPAPER_OVERLAY)}
                 >
                     <Icon icon="material-symbols:wallpaper" class="text-[1.25rem] flex-shrink-0"></Icon>
@@ -199,9 +203,8 @@ $effect(() => {
                 </button>
                 <button
                     class="w-full btn-regular rounded-md py-2 px-3 flex items-center gap-3 text-left active:scale-95 transition-all relative overflow-hidden"
-                    class:ring-1={wallpaperMode === WALLPAPER_NONE}
-                    class:ring-[var(--primary)]={wallpaperMode === WALLPAPER_NONE}
                     class:opacity-60={wallpaperMode !== WALLPAPER_NONE}
+                    class:bg-[var(--btn-regular-bg-hover)]={wallpaperMode === WALLPAPER_NONE}
                     onclick={() => switchWallpaperMode(WALLPAPER_NONE)}
                 >
                     <Icon icon="material-symbols:hide-image-outline" class="text-[1.25rem] flex-shrink-0"></Icon>
@@ -216,7 +219,7 @@ $effect(() => {
 
     <!-- Layout Switch Section -->
     {#if allowLayoutSwitch && !isSmallScreen}
-        <div class="px-1 mt-2">
+        <div class="mt-2 mb-2">
             <div class="flex gap-2 font-bold text-lg text-neutral-900 dark:text-neutral-100 transition relative ml-3 mb-2
                 before:w-1 before:h-4 before:rounded-md before:bg-[var(--primary)]
                 before:absolute before:-left-3 before:top-1/2 before:-translate-y-1/2"
@@ -233,9 +236,8 @@ $effect(() => {
                 <button
                     aria-label={i18n(I18nKey.postListLayoutList)}
                     class="flex-1 btn-regular rounded-md py-2 px-3 flex items-center justify-center gap-2 active:scale-95 transition-all relative overflow-hidden"
-                    class:ring-1={currentLayout === 'list'}
-                    class:ring-[var(--primary)]={currentLayout === 'list'}
                     class:opacity-60={currentLayout !== 'list'}
+                    class:bg-[var(--btn-regular-bg-hover)]={currentLayout === 'list'}
                     disabled={isSwitching}
                     onclick={switchLayout}
                     title={i18n(I18nKey.postListLayoutList)}
@@ -251,9 +253,8 @@ $effect(() => {
                 <button
                     aria-label={i18n(I18nKey.postListLayoutGrid)}
                     class="flex-1 btn-regular rounded-md py-2 px-3 flex items-center justify-center gap-2 active:scale-95 transition-all relative overflow-hidden"
-                    class:ring-1={currentLayout === 'grid'}
-                    class:ring-[var(--primary)]={currentLayout === 'grid'}
                     class:opacity-60={currentLayout !== 'grid'}
+                    class:bg-[var(--btn-regular-bg-hover)]={currentLayout === 'grid'}
                     disabled={isSwitching}
                     onclick={switchLayout}
                     title={i18n(I18nKey.postListLayoutGrid)}
@@ -270,6 +271,7 @@ $effect(() => {
         </div>
     {/if}
 </div>
+{/if}
 
 
 <style lang="stylus">
