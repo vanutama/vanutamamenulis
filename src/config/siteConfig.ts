@@ -79,11 +79,11 @@ export const siteConfig: SiteConfig = {
   // 提醒框（Admonitions）配置，修改后需要重启开发服务器才能生效
   // 主题：'github' | 'obsidian' | 'vitepress'，每个主题风格和语法不同，可根据喜好选择
   rehypeCallouts: {
-    theme: "github",
+    theme: "obsidian",
   },
 
   // 文章页底部的"上次编辑时间"卡片开关
-  showLastModified: false,
+  showLastModified: true,
 
   // 文章过期阈值（天数），超过此天数才显示"上次编辑"卡片
   outdatedThreshold: 360,
@@ -97,7 +97,7 @@ export const siteConfig: SiteConfig = {
   // bangumi配置
   bangumi: {
     // Bangumi用户ID
-    userId: "1163581",
+    userId: "0",
   },
 
   // 页面开关配置 - 控制特定页面的访问权限，设为false会返回404
@@ -106,7 +106,7 @@ export const siteConfig: SiteConfig = {
     // 赞助页面开关
     sponsor: true,
     // 留言板页面开关，需要配置评论系统
-    guestbook: false,
+    guestbook: true,
     // 番组计划页面开关，含追番、游戏、书籍和音乐，dev调试时只获取一页数据，build才会获取全部数据
     bangumi: false,
   },
