@@ -24,16 +24,22 @@ const getDynamicNavBarConfig = (): NavBarConfig => {
     url: "/links/",
     icon: "material-symbols:link",
 
-    // 子菜单
-    children: [
-      {
-        name: "GitHub",
-        url: "https://github.com/CuteLeaf/Firefly",
-        external: true,
-        icon: "fa6-brands:github",
-      },
-    ],
-  });
+		// 子菜单
+		children: [
+			{
+				name: "GitHub",
+				url: "https://github.com/CuteLeaf/Firefly",
+				external: true,
+				icon: "fa7-brands:github",
+			},
+			{
+				name: "Bilibili",
+				url: "https://space.bilibili.com/38932988",
+				external: true,
+				icon: "fa7-brands:bilibili",
+			},
+		],
+	});
 
   // 关于及其子菜单
   links.push({
