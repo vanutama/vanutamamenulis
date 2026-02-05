@@ -59,7 +59,7 @@ export const siteConfig: SiteConfig = {
     // { type: "image", value: "https://example.com/logo.png", alt: "Firefly Logo" }
     logo: {
       type: "icon",
-      value: "material-symbols:home-pin-outline",
+      value: "material-symbols:home-outline-rounded",
     },
     // 导航栏标题
     title: "Vanutama Menulis",
@@ -94,11 +94,11 @@ export const siteConfig: SiteConfig = {
   // OpenGraph图片功能,注意开启后要渲染很长时间，不建议本地调试的时候开启
   generateOgImages: true,
 
-	// bangumi配置
-	bangumi: {
-		// Bangumi用户ID
-		userId: "1143164",
-	},
+  // bangumi配置
+  bangumi: {
+    // Bangumi用户ID
+    userId: "1143164",
+  },
 
   // 页面开关配置 - 控制特定页面的访问权限，设为false会返回404
   // bangumi的数据为编译时获取的，所以不是实时数据，请配置bangumi.userId
@@ -134,13 +134,13 @@ export const siteConfig: SiteConfig = {
     postsPerPage: 10,
   },
 
-	// 统计分析
-	analytics: {
-		// Google Analytics ID
-		googleAnalyticsId: "",
-		// Microsoft Clarity ID
-		microsoftClarityId: "",
-	},
+  // 统计分析
+  analytics: {
+    // Google Analytics ID
+    googleAnalyticsId: "",
+    // Microsoft Clarity ID
+    microsoftClarityId: "",
+  },
 
   // 字体配置
   // 在src/config/fontConfig.ts中配置具体字体
