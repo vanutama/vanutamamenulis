@@ -55,10 +55,10 @@ export type SiteConfig = {
 	}>;
 
 	navbar: {
-		/** 导航栏Logo图标，可选类型：icon库、图片链接、本地图片 */
+		/** 导航栏Logo图标，可选类型：icon库、本地图片、网络图片链接 */
 		logo?: {
-			type: "icon" | "image";
-			value: string; // icon名或图片url
+			type: "icon" | "image" | "url";
+			value: string; // icon名、本地图片路径或网络图片url
 			alt?: string; // 图片alt文本
 		};
 		title?: string; // 导航栏标题，如果不设置则使用 title
@@ -611,6 +611,9 @@ export type MusicPlayerConfig = {
 
 	// 是否显示歌词
 	showLyrics?: boolean;
+
+	// 是否在导航栏显示音乐播放器
+	showInNavbar?: boolean;
 
 	// Meting API 配置
 	meting?: {
