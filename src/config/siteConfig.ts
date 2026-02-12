@@ -38,37 +38,36 @@ export const siteConfig: SiteConfig = {
     border: true,
   },
 
-	// Favicon 配置
-	favicon: [
-		{
-			// 图标文件路径
-			src: "/assets/images/favicon.ico",
-			// 可选，指定主题 'light' | 'dark'
-			// theme: "light",
-			// 可选，图标大小
-			// sizes: "32x32",
-		},
-	],
+  // Favicon 配置
+  favicon: [
+    {
+      // 图标文件路径
+      src: "/assets/images/favicon.ico",
+      // 可选，指定主题 'light' | 'dark'
+      // theme: "light",
+      // 可选，图标大小
+      // sizes: "32x32",
+    },
+  ],
 
-	// 导航栏配置
-	navbar: {
-		// 导航栏Logo
-		// 支持三种类型：
-		// 1. Astro图标库: { type: "icon", value: "material-symbols:home-pin-outline" }
-		// 2. 本地图片: { type: "image", value: "/assets/images/logo.webp", alt: "Firefly Logo" }
-		// 3. 网络图片: { type: "url", value: "https://example.com/logo.png", alt: "Firefly Logo" }
-		logo: {
-			type: "image",
-			value: "/assets/images/firefly.png",
-			alt: "🍀",
-		},
-		// 导航栏标题
-		title: "Firefly",
-		// 全宽导航栏，导航栏是否占满屏幕宽度，true：占满，false：不占满
-		widthFull: false,
-		// 导航栏图标和标题是否跟随主题色
-		followTheme: false,
-	},
+  // 导航栏配置
+  navbar: {
+    // 导航栏Logo
+    // 支持三种类型：
+    // 1. Astro图标库: { type: "icon", value: "material-symbols:home-pin-outline" }
+    // 2. 本地图片: { type: "image", value: "/assets/images/logo.webp", alt: "Firefly Logo" }
+    // 3. 网络图片: { type: "url", value: "https://example.com/logo.png", alt: "Firefly Logo" }
+    logo: {
+      type: "icon",
+      value: "material-symbols:stylus-note-rounded",
+    },
+    // 导航栏标题
+    title: "Vanutama Menulis",
+    // 全宽导航栏，导航栏是否占满屏幕宽度，true：占满，false：不占满
+    widthFull: false,
+    // 导航栏图标和标题是否跟随主题色
+    followTheme: false,
+  },
 
   // 站点开始日期，用于统计运行天数
   siteStartDate: "2025-12-25",
@@ -143,24 +142,24 @@ export const siteConfig: SiteConfig = {
     microsoftClarityId: "",
   },
 
-	// 图像优化及响应式配置
-	// 图像优化压缩只保留avif或webp
-	// 响应式图像是为在不同设备上提高性能而调整的图像。这些图像可以调整大小以适应其容器，并且可以根据访问者的屏幕尺寸和分辨率以不同的大小提供。
-	// Astro 仅能对 src 目录下的图像进行优化，src 目录下的图像越多，构建时间会越长
-	// Astro 图像文档 https://docs.astro.build/zh-cn/guides/images/
-	imageOptimization: {
-		// 输出图片格式
-		// - "avif": 仅输出 AVIF 格式（最新技术，最小体积，目前兼容性较低）
-		// - "webp": 仅输出 WebP 格式（体积适中，兼容性好）
-		// - "both": 同时输出 AVIF 和 WebP（推荐，浏览器自动选择最佳格式）
-		formats: "webp",
-		// 图片压缩质量 (1-100)，值越低体积越小但质量越差，推荐 70-85
-		quality: 85,
-	},
+  // 图像优化及响应式配置
+  // 图像优化压缩只保留avif或webp
+  // 响应式图像是为在不同设备上提高性能而调整的图像。这些图像可以调整大小以适应其容器，并且可以根据访问者的屏幕尺寸和分辨率以不同的大小提供。
+  // Astro 仅能对 src 目录下的图像进行优化，src 目录下的图像越多，构建时间会越长
+  // Astro 图像文档 https://docs.astro.build/zh-cn/guides/images/
+  imageOptimization: {
+    // 输出图片格式
+    // - "avif": 仅输出 AVIF 格式（最新技术，最小体积，目前兼容性较低）
+    // - "webp": 仅输出 WebP 格式（体积适中，兼容性好）
+    // - "both": 同时输出 AVIF 和 WebP（推荐，浏览器自动选择最佳格式）
+    formats: "webp",
+    // 图片压缩质量 (1-100)，值越低体积越小但质量越差，推荐 70-85
+    quality: 85,
+  },
 
-	// 字体配置
-	// 在src/config/fontConfig.ts中配置具体字体
-	font: fontConfig,
+  // 字体配置
+  // 在src/config/fontConfig.ts中配置具体字体
+  font: fontConfig,
 
   // 站点语言，在本配置文件顶部SITE_LANG定义
   lang: SITE_LANG,
