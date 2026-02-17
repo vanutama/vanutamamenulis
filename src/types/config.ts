@@ -323,7 +323,7 @@ export type CoverImageConfig = {
 	randomCoverImage: {
 		enable: boolean; // 是否启用随机图功能
 		apis: string[]; // 随机图API列表
-		fallback?: string; // API失败时的回退图片路径（相对于src目录）
+		fallback?: string; // API失败时的回退图片路径（相对于src目录或以/开头的public目录路径）
 		showLoading?: boolean; // 是否显示加载动画
 	};
 };
@@ -499,6 +499,7 @@ export type BackgroundWallpaperConfig = {
 			| string; // 壁纸位置，支持CSS object-position的所有值，包括百分比和像素值
 		homeText?: {
 			enable: boolean; // 是否在首页显示自定义文字（全局开关）
+			switchable?: boolean; // 是否允许用户通过控制面板切换横幅标题显示
 			title?: string; // 主标题
 			subtitle?: string | string[]; // 副标题，支持单个字符串或字符串数组
 			titleSize?: string; // 主标题字体大小，如 "3.5rem"
@@ -539,9 +540,10 @@ export type BackgroundWallpaperConfig = {
 			enable:
 				| boolean
 				| {
-						desktop: boolean; // 桌面端是否启用波浪动画效果
-						mobile: boolean; // 移动端是否启用波浪动画效果
-				  }; // 是否启用波浪动画效果，支持布尔值或分别设置桌面端和移动端
+						desktop: boolean; // 桌面端是否启用水波纹动画效果
+						mobile: boolean; // 移动端是否启用水波纹动画效果
+				  }; // 是否启用水波纹动画效果，支持布尔值或分别设置桌面端和移动端
+			switchable?: boolean; // 是否允许用户通过控制面板切换水波纹动画
 		};
 	};
 	// 全屏透明覆盖模式特有配置

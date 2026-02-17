@@ -77,6 +77,8 @@ export const ru: Translation = {
 
 	[Key.author]: "Автор",
 	[Key.publishedAt]: "Опубликовано",
+	[Key.updatedAt]: "Обновлено",
+	[Key.readTime]: "Время чтения",
 	[Key.license]: "Лицензия",
 	[Key.bangumi]: "Бангуми",
 
@@ -204,6 +206,11 @@ export const ru: Translation = {
 	[Key.wallpaperBannerMode]: "Баннер обои",
 	[Key.wallpaperOverlayMode]: "Прозрачный",
 	[Key.wallpaperNoneMode]: "Однотонный фон",
+
+	// Настройки баннера
+	[Key.bannerSettings]: "Настройки баннера",
+	[Key.bannerTitle]: "Заголовок главного баннера",
+	[Key.wavesAnimation]: "Анимация волн",
 
 	// Макет списка сообщений
 	[Key.postListLayout]: "Макет списка сообщений",

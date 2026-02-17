@@ -70,6 +70,8 @@ enum I18nKey {
 
 	author = "author",
 	publishedAt = "publishedAt",
+	updatedAt = "updatedAt",
+	readTime = "readTime",
 	license = "license",
 	friends = "friends",
 	friendsDescription = "friendsDescription",
@@ -193,6 +195,11 @@ enum I18nKey {
 	wallpaperBannerMode = "wallpaperBannerMode",
 	wallpaperOverlayMode = "wallpaperOverlayMode",
 	wallpaperNoneMode = "wallpaperNoneMode",
+
+	// 横幅设置
+	bannerSettings = "bannerSettings",
+	bannerTitle = "bannerTitle",
+	wavesAnimation = "wavesAnimation",
 
 	// 文章布局
 	postListLayout = "postListLayout",

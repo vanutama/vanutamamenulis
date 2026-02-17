@@ -9,11 +9,30 @@
 - Uses [MetingJS](https://github.com/metowolf/MetingJS) and [APlayer](https://github.com/MoePlayer/APlayer) music player
 - Icons from [Iconify](https://iconify.design/)
 
+The copyright of Firefly-related image assets belongs to [miHoYo](https://www.mihoyo.com/), the developer of the game ["Honkai: Star Rail"](https://sr.mihoyo.com/).
+
+### Tech Stack
+
+- [Astro](https://astro.build) 
+- [Tailwind CSS](https://tailwindcss.com) 
+- [Iconify](https://iconify.design)
+
+### Inspiration Projects
+
+- [fuwari](https://github.com/saicaca/fuwari)
+- [hexo-theme-shoka](https://github.com/amehime/hexo-theme-shoka)
+- [astro-koharu](https://github.com/cosZone/astro-koharu)
+- [Mizuki](https://github.com/matsuzaka-yuki/Mizuki)
+
+### Other References
+- Blogger `霞葉` [Bangumi Collection](https://kasuha.com/posts/fuwari-enhance-ep2/) page component
+- Bilibili creator `公公的日常` Q-version [Firefly Mascot Spine Model](https://www.bilibili.com/video/BV1fuVzzdE5y)
+
 ## 📝 License
 
 This project is licensed under the [MIT license](https://mit-license.org/). See the [LICENSE](./LICENSE) file for details.
 
-Originally forked from [saicaca/fuwari](https://github.com/saicaca/fuwari). Thanks to the original author for their contributions. The original project is licensed under the [MIT License](https://mit-license.org/)
+Originally forked from [saicaca/fuwari](https://github.com/saicaca/fuwari). Thanks to the original author for their contributions. 
 
 **Copyright Notice:**
 - Copyright (c) 2024 [saicaca](https://github.com/saicaca) - [fuwari](https://github.com/saicaca/fuwari)
