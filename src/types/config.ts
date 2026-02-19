@@ -77,6 +77,9 @@ export type SiteConfig = {
 		bangumi: boolean;
 	};
 
+	// 分类导航栏开关
+	categoryBar?: boolean;
+
 	// 文章列表布局配置
 	postListLayout: {
 		defaultMode: "list" | "grid"; // 默认布局模式：list=列表模式，grid=网格模式
@@ -369,8 +372,9 @@ export type MobileBottomComponentConfig = {
 
 export type SidebarLayoutConfig = {
 	enable: boolean; // 是否启用侧边栏
-	position: "left" | "both"; // 侧边栏位置：左侧或双侧
-	showRightSidebarOnPostPage?: boolean; // 当position为left时，是否在文章详情页显示右侧边栏
+	position: "left" | "right" | "both"; // 侧边栏位置：左侧、右侧或双侧
+	tabletSidebar?: "left" | "right"; // 平板端(769-1279px)显示哪侧侧边栏，仅position为both时生效，默认left
+	showBothSidebarsOnPostPage?: boolean; // 当position为left或right时，是否在文章详情页显示双侧边栏
 	leftComponents: WidgetComponentConfig[]; // 左侧边栏组件配置列表
 	rightComponents: WidgetComponentConfig[]; // 右侧边栏组件配置列表
 	mobileBottomComponents: MobileBottomComponentConfig[]; // 移动端底部组件配置列表（<768px显示）
