@@ -92,8 +92,8 @@ export type SiteConfig = {
 			// 网格布局配置，仅在 defaultMode 为 "grid" 或允许切换布局时生效
 			// 是否开启瀑布流布局
 			masonry: boolean;
-			// 网格模式列数：2 或 3，默认为 2。注意：3列模式仅在单侧边栏（或无侧边栏）且屏幕宽度足够时生效
-			columns?: 2 | 3;
+			// 网格模式卡片最小宽度(px)，浏览器根据容器宽度自动计算列数，默认 320
+			columnWidth?: number;
 		};
 	};
 
@@ -122,6 +122,13 @@ export type SiteConfig = {
 		 * 值越低体积越小但质量越差，推荐 70-85
 		 */
 		quality?: number;
+		/**
+		 * 为特定域名的图片添加 referrerpolicy="no-referrer" 属性
+		 * 开启后可解决指定域名图片加载时的 403 问题（如防盗链图片）
+		 * 示例：["i0.hdslb.com", "*.bilibili.com"] 支持通配符 *
+		 * 仅影响匹配域名的图片标签，不影响其他链接的 referrer 行为
+		 */
+		noReferrerDomains?: string[];
 	};
 };
 
@@ -560,6 +567,7 @@ export type BackgroundWallpaperConfig = {
 		zIndex?: number; // 层级，确保壁纸在合适的层级显示
 		opacity?: number; // 壁纸透明度，0-1之间
 		blur?: number; // 背景模糊程度，单位px
+		cardOpacity?: number; // 卡片背景透明度，0-1之间
 	};
 };
 
@@ -672,7 +680,6 @@ export type SponsorItem = {
 	name: string; // 赞助者名称，如果想显示匿名，可以直接设置为"匿名"或使用 i18n
 	amount?: string; // 赞助金额（可选）
 	date?: string; // 赞助日期（可选，ISO 格式）
-	message?: string; // 留言（可选）
 };
 
 // 赞助配置
