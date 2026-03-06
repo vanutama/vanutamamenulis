@@ -37,11 +37,13 @@ export const siteConfig: SiteConfig = {
   // 在使用单侧栏边栏时，建议调低一些宽度以获得更好的视觉效果。
   pageWidth: 100,
 
-  // 网站Card样式配置
-  card: {
-    // 是否开启卡片边框和阴影，开启后让网站更有立体感
-    border: true,
-  },
+	// 网站Card样式配置
+	card: {
+		// 是否开启卡片边框和阴影，开启后让网站更有立体感
+		border: false,
+		// 是否让卡片风格跟随主题色相
+		followTheme: false,
+	},
 
   // Favicon 配置
   favicon: [
