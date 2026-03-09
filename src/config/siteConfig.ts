@@ -37,13 +37,13 @@ export const siteConfig: SiteConfig = {
   // 在使用单侧栏边栏时，建议调低一些宽度以获得更好的视觉效果。
   pageWidth: 100,
 
-	// 网站Card样式配置
-	card: {
-		// 是否开启卡片边框和阴影，开启后让网站更有立体感
-		border: false,
-		// 是否让卡片风格跟随主题色相
-		followTheme: false,
-	},
+  // 网站Card样式配置
+  card: {
+    // 是否开启卡片边框和阴影，开启后让网站更有立体感
+    border: false,
+    // 是否让卡片风格跟随主题色相
+    followTheme: false,
+  },
 
   // Favicon 配置
   favicon: [
@@ -72,6 +72,8 @@ export const siteConfig: SiteConfig = {
     title: "Vanutama Menulis",
     // 全宽导航栏，导航栏是否占满屏幕宽度，true：占满，false：不占满
     widthFull: false,
+    // center/left/right/
+    menuAlign: "center",
     // 导航栏图标和标题是否跟随主题色
     followTheme: false,
   },
@@ -101,15 +103,15 @@ export const siteConfig: SiteConfig = {
   // OpenGraph图片功能,注意开启后要渲染很长时间，不建议本地调试的时候开启
   generateOgImages: true,
 
-	// bangumi配置
-	bangumi: {
-		// Bangumi用户ID
-		userId: "1143164",
-		// 条目类型排序，数组中的类型将按顺序优先展示
-		// 可选值: "anime" | "book" | "music" | "game" | "real" (暂不支持"real"类型)
-		// 未列出的类型将按默认顺序排在后面
-		categoryOrder: ["anime", "book", "music", "game"],
-	},
+  // bangumi配置
+  bangumi: {
+    // Bangumi用户ID
+    userId: "1143164",
+    // 条目类型排序，数组中的类型将按顺序优先展示
+    // 可选值: "anime" | "book" | "music" | "game" | "real" (暂不支持"real"类型)
+    // 未列出的类型将按默认顺序排在后面
+    categoryOrder: ["anime", "book", "music", "game"],
+  },
 
   // 页面开关配置 - 控制特定页面的访问权限，设为false会返回404
   // bangumi的数据为编译时获取的，所以不是实时数据，请配置bangumi.userId
@@ -127,20 +129,20 @@ export const siteConfig: SiteConfig = {
   // 分类导航栏开关，在首页和归档页顶部显示分类快捷导航
   categoryBar: true,
 
-	// 文章列表布局配置
-	postListLayout: {
-		// 默认布局模式："list" 列表模式（单列布局），"grid" 网格模式（多列布局）
-		defaultMode: "list",
-		// 是否允许用户切换布局
-		allowSwitch: true,
-		// 网格布局配置，仅在 defaultMode 为 "grid" 或允许切换布局时生效
-		grid: {
-			// 是否开启瀑布流布局，同时有封面图和无封面图的混合文章推荐开启
-			masonry: false,
-			// 网格模式卡片最小宽度(px)，浏览器根据容器宽度自动计算列数，默认 280
-			columnWidth: 320,
-		},
-	},
+  // 文章列表布局配置
+  postListLayout: {
+    // 默认布局模式："list" 列表模式（单列布局），"grid" 网格模式（多列布局）
+    defaultMode: "list",
+    // 是否允许用户切换布局
+    allowSwitch: true,
+    // 网格布局配置，仅在 defaultMode 为 "grid" 或允许切换布局时生效
+    grid: {
+      // 是否开启瀑布流布局，同时有封面图和无封面图的混合文章推荐开启
+      masonry: false,
+      // 网格模式卡片最小宽度(px)，浏览器根据容器宽度自动计算列数，默认 280
+      columnWidth: 320,
+    },
+  },
 
   // 分页配置
   pagination: {
@@ -156,24 +158,24 @@ export const siteConfig: SiteConfig = {
     microsoftClarityId: "",
   },
 
-	// 图像优化及响应式配置
-	// 图像优化压缩只保留avif或webp
-	// 响应式图像是为在不同设备上提高性能而调整的图像。这些图像可以调整大小以适应其容器，并且可以根据访问者的屏幕尺寸和分辨率以不同的大小提供。
-	// Astro 仅能对 src 目录下的图像进行优化，src 目录下的图像越多，构建时间会越长
-	// Astro 图像文档 https://docs.astro.build/zh-cn/guides/images/
-	imageOptimization: {
-		// 输出图片格式
-		// - "avif": 仅输出 AVIF 格式（最新技术，最小体积，目前兼容性较低）
-		// - "webp": 仅输出 WebP 格式（体积适中，兼容性好）
-		// - "both": 同时输出 AVIF 和 WebP（推荐，浏览器自动选择最佳格式）
-		formats: "webp",
-		// 图片压缩质量 (1-100)，值越低体积越小但质量越差，推荐 70-85
-		quality: 85,
-		// 为特定域名的图片添加 referrerpolicy="no-referrer" 属性
-		// 支持通配符 *，例如：["i0.hdslb.com", "*.bilibili.com"]
-		// 可解决指定域名图片加载时的 403 问题（如防盗链图片）
-		noReferrerDomains: [],
-	},
+  // 图像优化及响应式配置
+  // 图像优化压缩只保留avif或webp
+  // 响应式图像是为在不同设备上提高性能而调整的图像。这些图像可以调整大小以适应其容器，并且可以根据访问者的屏幕尺寸和分辨率以不同的大小提供。
+  // Astro 仅能对 src 目录下的图像进行优化，src 目录下的图像越多，构建时间会越长
+  // Astro 图像文档 https://docs.astro.build/zh-cn/guides/images/
+  imageOptimization: {
+    // 输出图片格式
+    // - "avif": 仅输出 AVIF 格式（最新技术，最小体积，目前兼容性较低）
+    // - "webp": 仅输出 WebP 格式（体积适中，兼容性好）
+    // - "both": 同时输出 AVIF 和 WebP（推荐，浏览器自动选择最佳格式）
+    formats: "webp",
+    // 图片压缩质量 (1-100)，值越低体积越小但质量越差，推荐 70-85
+    quality: 85,
+    // 为特定域名的图片添加 referrerpolicy="no-referrer" 属性
+    // 支持通配符 *，例如：["i0.hdslb.com", "*.bilibili.com"]
+    // 可解决指定域名图片加载时的 403 问题（如防盗链图片）
+    noReferrerDomains: [],
+  },
 
   // 字体配置
   // 在src/config/fontConfig.ts中配置具体字体
