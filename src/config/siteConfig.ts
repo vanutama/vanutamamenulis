@@ -76,6 +76,8 @@ export const siteConfig: SiteConfig = {
     menuAlign: "center",
     // 导航栏图标和标题是否跟随主题色
     followTheme: false,
+    // navbar
+    stickyNavbar: true,
   },
 
   // 站点开始日期，用于统计运行天数
