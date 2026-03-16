@@ -71,6 +71,7 @@ export type SiteConfig = {
 		widthFull?: boolean; // 导航栏是否占满屏幕宽度
 		menuAlign?: "left" | "center"; // 导航菜单对齐方式（仅桌面端菜单）
 		followTheme?: boolean; // 导航栏图标和标题是否跟随主题色
+		stickyNavbar?: boolean; // 导航栏是否固定在顶部始终可见
 	};
 
 	showLastModified: boolean; // 控制"上次编辑"卡片显示的开关
@@ -110,6 +111,18 @@ export type SiteConfig = {
 	analytics?: {
 		googleAnalyticsId?: string; // Google Analytics ID
 		microsoftClarityId?: string; // Microsoft Clarity ID
+		umamiAnalytics?: {
+			websiteId?: string; // Umami Website ID
+			scriptUrl?: string; // Umami JS地址，支持使用自建
+		};
+		la51Analytics?: {
+			Id?: string; // 51la 统计 ID
+			sdkUrl?: string; // 自定义 SDK 地址，防止 DNS 污染，默认为 "//sdk.51.la/js-sdk-pro.min.js"
+			ck?: string; // 多个统计 ID 的数据分离标识，默认与 id 相同
+			autoTrack?: boolean; // 开启事件分析功能，默认 true
+			hashMode?: boolean; // 单页面应用统计（Vue/React 等），默认 false
+			screenRecord?: boolean; // 开启网站录屏功能，默认 true
+		};
 	};
 
 	// 图片优化配置
