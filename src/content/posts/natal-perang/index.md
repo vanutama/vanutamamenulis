@@ -2,9 +2,11 @@
 title: Perang Rohani yang Dimulai di Natal
 published: 2025-12-25
 pinned: true
-description: "Mengapa Kelahiran Mesias adalah Deklarasi Perang?"
-image: "./cover.jpg"
-tags: ["Natal", "Mesias", "Divine Council Worldview"]
+description: Mengapa Kelahiran Mesias adalah Deklarasi Perang?
+image: ./cover.jpg
+tags:
+  - Natal
+  - Mesias
 category: Teologi
 draft: false
 ---
