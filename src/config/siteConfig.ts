@@ -37,13 +37,13 @@ export const siteConfig: SiteConfig = {
   // 在使用单侧栏边栏时，建议调低一些宽度以获得更好的视觉效果。
   pageWidth: 100,
 
-	// 网站Card样式配置
-	card: {
-		// 是否开启卡片边框和阴影，开启后让网站更有立体感
-		border: true,
-		// 是否让卡片风格跟随主题色相
-		followTheme: false,
-	},
+  // 网站Card样式配置
+  card: {
+    // 是否开启卡片边框和阴影，开启后让网站更有立体感
+    border: true,
+    // 是否让卡片风格跟随主题色相
+    followTheme: false,
+  },
 
   // Favicon 配置
   favicon: [
@@ -77,7 +77,7 @@ export const siteConfig: SiteConfig = {
     // 导航栏图标和标题是否跟随主题色
     followTheme: false,
     // navbar
-    stickyNavbar: false,
+    stickyNavbar: true,
   },
 
   // 站点开始日期，用于统计运行天数
@@ -132,26 +132,26 @@ export const siteConfig: SiteConfig = {
   // 分类导航栏开关，在首页和归档页顶部显示分类快捷导航
   categoryBar: true,
 
-	// 文章列表布局配置
-	postListLayout: {
-		// 默认布局模式："list" 列表模式（单列布局），"grid" 网格模式（多列布局）
-		defaultMode: "list",
-		// 移动端默认布局模式，不设置则跟随 defaultMode
-		mobileDefaultMode: "list",
-		// 是否在文章列表中显示标签
-		showTags: true,
-		// 文章简介显示行数，设为 0 则不截断
-		descriptionLines: 2,
-		// 是否允许用户切换布局
-		allowSwitch: true,
-		// 网格布局配置，仅在 defaultMode 为 "grid" 或允许切换布局时生效
-		grid: {
-			// 是否开启瀑布流布局，同时有封面图和无封面图的混合文章推荐开启
-			masonry: false,
-			// 网格模式卡片最小宽度(px)，浏览器根据容器宽度自动计算列数
-			columnWidth: 320,
-		},
-	},
+  // 文章列表布局配置
+  postListLayout: {
+    // 默认布局模式："list" 列表模式（单列布局），"grid" 网格模式（多列布局）
+    defaultMode: "list",
+    // 移动端默认布局模式，不设置则跟随 defaultMode
+    mobileDefaultMode: "list",
+    // 是否在文章列表中显示标签
+    showTags: true,
+    // 文章简介显示行数，设为 0 则不截断
+    descriptionLines: 2,
+    // 是否允许用户切换布局
+    allowSwitch: true,
+    // 网格布局配置，仅在 defaultMode 为 "grid" 或允许切换布局时生效
+    grid: {
+      // 是否开启瀑布流布局，同时有封面图和无封面图的混合文章推荐开启
+      masonry: false,
+      // 网格模式卡片最小宽度(px)，浏览器根据容器宽度自动计算列数
+      columnWidth: 320,
+    },
+  },
 
   // 分页配置
   pagination: {
@@ -159,52 +159,52 @@ export const siteConfig: SiteConfig = {
     postsPerPage: 10,
   },
 
-	// 统计分析
-	analytics: {
-		// Google Analytics ID
-		googleAnalyticsId: "",
-		// Microsoft Clarity ID
-		microsoftClarityId: "",
-		// Umami 统计配置
-		umamiAnalytics: {
-			// Umami Website ID
-			websiteId: "",
-			// Umami JS地址，支持使用自建
-			scriptUrl: "https://cloud.umami.is/script.js",
-			// 是否追踪出站链接
-			trackOutboundLinks: true,
-			// 是否收集浏览器性能指标
-			collectWebVitals: false,
-			// 会话回放配置
-			relpays: {
-				// 是否启用会话回放
-				enabled: false,
-				// 录制会话采样率，范围 0-1，例如 0.15 表示记录 15% 的会话
-				sampleRate: 0.15,
-				// 隐私遮罩级别："moderate" 会遮罩所有输入框；"strict" 额外遮罩页面全部文本
-				maskLevel: "moderate",
-				// 单次录制最大时长（毫秒）
-				maxDuration: 300000,
-				// 需要排除录制的元素 CSS 选择器，例如 ".sensitive-widget"
-				blockSelector: "",
-			},
-		},
-		// 51la 统计配置
-		la51Analytics: {
-			// 51la 统计 ID
-			Id: "",
-			// 自定义 SDK JS 地址，防止 DNS 污染，留空使用默认地址
-			sdkUrl: "",
-			// 多个统计 ID 的数据分离标识，留空则使用 Id
-			ck: "",
-			// 是否开启事件分析功能
-			autoTrack: false,
-			//  Hash路由模式, 项目使用History API路由, 所以不必开启默认false
-			hashMode: false,
-			// 是否开启网站录屏功能
-			screenRecord: true,
-		},
-	},
+  // 统计分析
+  analytics: {
+    // Google Analytics ID
+    googleAnalyticsId: "",
+    // Microsoft Clarity ID
+    microsoftClarityId: "",
+    // Umami 统计配置
+    umamiAnalytics: {
+      // Umami Website ID
+      websiteId: "",
+      // Umami JS地址，支持使用自建
+      scriptUrl: "https://cloud.umami.is/script.js",
+      // 是否追踪出站链接
+      trackOutboundLinks: true,
+      // 是否收集浏览器性能指标
+      collectWebVitals: false,
+      // 会话回放配置
+      relpays: {
+        // 是否启用会话回放
+        enabled: false,
+        // 录制会话采样率，范围 0-1，例如 0.15 表示记录 15% 的会话
+        sampleRate: 0.15,
+        // 隐私遮罩级别："moderate" 会遮罩所有输入框；"strict" 额外遮罩页面全部文本
+        maskLevel: "moderate",
+        // 单次录制最大时长（毫秒）
+        maxDuration: 300000,
+        // 需要排除录制的元素 CSS 选择器，例如 ".sensitive-widget"
+        blockSelector: "",
+      },
+    },
+    // 51la 统计配置
+    la51Analytics: {
+      // 51la 统计 ID
+      Id: "",
+      // 自定义 SDK JS 地址，防止 DNS 污染，留空使用默认地址
+      sdkUrl: "",
+      // 多个统计 ID 的数据分离标识，留空则使用 Id
+      ck: "",
+      // 是否开启事件分析功能
+      autoTrack: false,
+      //  Hash路由模式, 项目使用History API路由, 所以不必开启默认false
+      hashMode: false,
+      // 是否开启网站录屏功能
+      screenRecord: true,
+    },
+  },
 
   // 图像优化及响应式配置
   // 图像优化压缩只保留avif或webp
