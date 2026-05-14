@@ -97,8 +97,6 @@ Dan kalau kita masih ragu, ada satu teks lagi yang mengunci interpretasi ini: Ma
 
 Kenaikan adalah *enthronement*, penobatan Raja. Bukan sekadar perpindahan lokasi. Yesus tidak sedang naik roket menuju luar angkasa. Ia sedang memasuki ruang takhta ilahi sebagai Raja atas segala yang ada di langit dan di bumi.
 
----
-
 ## ⛅ Jadi Surga Itu "Tempat di Atas Awan"?
 
 Di titik ini, mungkin ada pertanyaan yang muncul: kalau kenaikan bukan tentang pergi ke tempat yang jauh, lalu surga itu di mana? Apakah kita terlalu merohanikan segalanya?
