@@ -3,24 +3,32 @@ import { fontConfig } from "./fontConfig";
 
 // 定义站点语言
 // 语言代码，例如：'zh_CN', 'zh_TW', 'en', 'ja', 'ru'。
-const SITE_LANG = "en";
+const SITE_LANG = "zh_CN";
 
 export const siteConfig: SiteConfig = {
   // 站点标题
   title: "Vanutama Menulis",
 
   // 站点副标题
-  subtitle: "Personal Blog",
+  subtitle: "Demo site",
 
   // 站点 URL
   site_url: "https://vanutamamenulis.pages.dev",
 
   // 站点描述
   description:
-    "Blog pribadi Yedija Vanutama, berisi berbagai macam tulisan dari teologi, resensi buku sampai hal-hal menarik lainnya.",
+    "Firefly 是一款基于 Astro 框架和 Fuwari 模板开发的清新美观且现代化个人博客主题模板，专为技术爱好者和内容创作者设计。该主题融合了现代 Web 技术栈，提供了丰富的功能模块和高度可定制的界面，让您能够轻松打造出专业且美观的个人博客网站。",
 
   // 站点关键词
-  keywords: ["Teologi", "Alkitab", "Buku", "Yedija", "Vanutama"],
+  keywords: [
+    "Firefly",
+    "Fuwari",
+    "Astro",
+    "ACGN",
+    "博客",
+    "技术博客",
+    "静态博客",
+  ],
 
   // 主题色
   themeColor: {
@@ -29,7 +37,7 @@ export const siteConfig: SiteConfig = {
     // 是否对访问者隐藏主题色选择器
     fixed: false,
     // 默认模式："light" 亮色，"dark" 暗色，"system" 跟随系统
-    defaultMode: "dark",
+    defaultMode: "system",
   },
 
   // 页面整体宽度（单位：rem）
@@ -49,7 +57,7 @@ export const siteConfig: SiteConfig = {
   favicon: [
     {
       // 图标文件路径
-      src: "/assets/images/favicon.ico",
+      src: "/favicon/favicon.ico",
       // 可选，指定主题 'light' | 'dark'
       // theme: "light",
       // 可选，图标大小
@@ -62,26 +70,28 @@ export const siteConfig: SiteConfig = {
     // 导航栏Logo
     // 支持三种类型：
     // 1. Astro图标库: { type: "icon", value: "material-symbols:home-pin-outline" }
-    // 2. 本地图片: { type: "image", value: "/assets/images/logo.webp", alt: "Firefly Logo" }
-    // 3. 网络图片: { type: "url", value: "https://example.com/logo.png", alt: "Firefly Logo" }
+    // 2. 本地图片（public目录，不优化）: { type: "image", value: "/assets/images/logo.webp", alt: "Logo" }
+    // 3. 本地图片（src目录，自动优化但会增加构建时间，推荐）: { type: "image", value: "assets/images/logo.webp", alt: "Logo" }
+    // 4. 网络图片: { type: "url", value: "https://example.com/logo.png", alt: "Logo" }
     logo: {
-      type: "icon",
-      value: "material-symbols:stylus-note-rounded",
+      type: "image",
+      value: "assets/images/firefly.png",
+      alt: "🍀",
     },
     // 导航栏标题
-    title: "Vanutama Menulis",
-    // 全宽导航栏，导航栏是否占满屏幕宽度，true：占满，false：不占满
+    title: "Firefly",
+    // 全宽导航栏，导航栏是否占满屏幕宽度
     widthFull: false,
-    // center/left/right/
+    // 导航菜单对齐方式，left：左对齐，center：居中
     menuAlign: "center",
     // 导航栏图标和标题是否跟随主题色
     followTheme: false,
-    // navbar
+    // 导航栏是否固定在顶部并始终可见
     stickyNavbar: true,
   },
 
   // 站点开始日期，用于统计运行天数
-  siteStartDate: "2025-12-25",
+  siteStartDate: "2025-01-01",
 
   // 站点时区（IANA 时区字符串），用于格式化bangumi、rss里的构建日期时间等等..
   // 示例："Asia/Shanghai", "UTC", 如果为空，则按照构建服务器的时区进行时区转换
@@ -90,20 +100,20 @@ export const siteConfig: SiteConfig = {
   // 提醒框（Admonitions）配置，修改后需要重启开发服务器才能生效
   // 主题：'github' | 'obsidian' | 'vitepress'，每个主题风格和语法不同，可根据喜好选择
   rehypeCallouts: {
-    theme: "obsidian",
+    theme: "github",
   },
 
   // 文章页底部的"上次编辑时间"卡片开关
-  showLastModified: false,
+  showLastModified: true,
 
   // 文章过期阈值（天数），超过此天数才显示"上次编辑"卡片
-  outdatedThreshold: 360,
+  outdatedThreshold: 30,
 
   // 是否开启分享海报生成功能
   sharePoster: true,
 
   // OpenGraph图片功能,注意开启后要渲染很长时间，不建议本地调试的时候开启
-  generateOgImages: true,
+  generateOgImages: false,
 
   // bangumi配置
   bangumi: {
@@ -118,9 +128,10 @@ export const siteConfig: SiteConfig = {
   // 页面开关配置 - 控制特定页面的访问权限，设为false会返回404
   // bangumi的数据为编译时获取的，所以不是实时数据，请配置bangumi.userId
   pages: {
+    // 友链页面开关
     friends: false,
     // 赞助页面开关
-    sponsor: true,
+    sponsor: false,
     // 留言板页面开关，需要配置评论系统
     guestbook: false,
     // 番组计划页面开关，含追番、游戏、书籍和音乐，dev调试时只获取一页数据，build才会获取全部数据
@@ -159,54 +170,54 @@ export const siteConfig: SiteConfig = {
     postsPerPage: 10,
   },
 
-	// 统计分析
-	analytics: {
-		// Google Analytics ID
-		googleAnalyticsId: "",
-		// Microsoft Clarity ID
-		microsoftClarityId: "",
-		// Umami 统计配置
-		umamiAnalytics: {
-			// Umami Website ID
-			websiteId: "",
-			// Umami JS地址，支持使用自建
-			scriptUrl: "https://cloud.umami.is/script.js",
-			// Umami 会话回放脚本地址，支持使用自建
-			replaysScriptUrl: "https://cloud.umami.is/recorder.js",
-			// 是否追踪出站链接
-			trackOutboundLinks: true,
-			// 是否收集浏览器性能指标
-			collectWebVitals: false,
-			// 会话回放配置
-			replays: {
-				// 是否启用会话回放
-				enabled: false,
-				// 录制会话采样率，范围 0-1，例如 0.15 表示记录 15% 的会话
-				sampleRate: 0.15,
-				// 隐私遮罩级别："moderate" 会遮罩所有输入框；"strict" 额外遮罩页面全部文本
-				maskLevel: "moderate",
-				// 单次录制最大时长（毫秒）
-				maxDuration: 300000,
-				// 需要排除录制的元素 CSS 选择器，例如 ".sensitive-widget"
-				blockSelector: "",
-			},
-		},
-		// 51la 统计配置
-		la51Analytics: {
-			// 51la 统计 ID
-			Id: "",
-			// 自定义 SDK JS 地址，防止 DNS 污染，留空使用默认地址
-			sdkUrl: "",
-			// 多个统计 ID 的数据分离标识，留空则使用 Id
-			ck: "",
-			// 是否开启事件分析功能
-			autoTrack: false,
-			//  Hash路由模式, 项目使用History API路由, 所以不必开启默认false
-			hashMode: false,
-			// 是否开启网站录屏功能
-			screenRecord: true,
-		},
-	},
+  // 统计分析
+  analytics: {
+    // Google Analytics ID
+    googleAnalyticsId: "",
+    // Microsoft Clarity ID
+    microsoftClarityId: "",
+    // Umami 统计配置
+    umamiAnalytics: {
+      // Umami Website ID
+      websiteId: "",
+      // Umami JS地址，支持使用自建
+      scriptUrl: "https://cloud.umami.is/script.js",
+      // Umami 会话回放脚本地址，支持使用自建
+      replaysScriptUrl: "https://cloud.umami.is/recorder.js",
+      // 是否追踪出站链接
+      trackOutboundLinks: true,
+      // 是否收集浏览器性能指标
+      collectWebVitals: false,
+      // 会话回放配置
+      replays: {
+        // 是否启用会话回放
+        enabled: false,
+        // 录制会话采样率，范围 0-1，例如 0.15 表示记录 15% 的会话
+        sampleRate: 0.15,
+        // 隐私遮罩级别："moderate" 会遮罩所有输入框；"strict" 额外遮罩页面全部文本
+        maskLevel: "moderate",
+        // 单次录制最大时长（毫秒）
+        maxDuration: 300000,
+        // 需要排除录制的元素 CSS 选择器，例如 ".sensitive-widget"
+        blockSelector: "",
+      },
+    },
+    // 51la 统计配置
+    la51Analytics: {
+      // 51la 统计 ID
+      Id: "",
+      // 自定义 SDK JS 地址，防止 DNS 污染，留空使用默认地址
+      sdkUrl: "",
+      // 多个统计 ID 的数据分离标识，留空则使用 Id
+      ck: "",
+      // 是否开启事件分析功能
+      autoTrack: false,
+      //  Hash路由模式, 项目使用History API路由, 所以不必开启默认false
+      hashMode: false,
+      // 是否开启网站录屏功能
+      screenRecord: true,
+    },
+  },
 
   // 图像优化及响应式配置
   // 图像优化压缩只保留avif或webp

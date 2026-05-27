@@ -90,8 +90,8 @@ export const sidebarLayoutConfig: SidebarLayoutConfig = {
       showOnPostPage: true,
       // 响应式配置
       responsive: {
-        // 折叠阈值：当标签数量超过>20个时自动折叠
-        collapseThreshold: 20,
+        // 折叠阈值：当标签数量超过>10个时自动折叠
+        collapseThreshold: 10,
       },
     },
     {
@@ -181,7 +181,7 @@ export const sidebarLayoutConfig: SidebarLayoutConfig = {
       // 是否启用该组件
       enable: false,
       // 是否在文章详情页显示
-      showOnPostPage: true,
+      showOnPostPage: false,
     },
     {
       // 组件类型：分类组件
