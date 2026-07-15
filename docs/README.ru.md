@@ -8,7 +8,7 @@
 > 
 > ![Node.js >= 22](https://img.shields.io/badge/node.js-%3E%3D22-brightgreen) 
 ![pnpm >= 9](https://img.shields.io/badge/pnpm-%3E%3D9-blue)
-![Astro](https://img.shields.io/badge/Astro-6.3.3-orange)
+![Astro](https://img.shields.io/badge/Astro-7.0.7-orange)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.9.2-blue)
 >
 > [![Stars](https://img.shields.io/github/stars/CuteLeaf/Firefly?style=social)](https://github.com/CuteLeaf/Firefly/stargazers)
@@ -43,8 +43,20 @@
 
 🔧 Высокая настраиваемость: Большинство функций можно настроить через конфигурационные файлы
 
-<img alt="firefly" src="./images/1.webp" />
-<img alt="Lighthouse" src="./images/Lighthouse.png" />
+<table width="100%" align="center">
+  <tr>
+    <td colspan="3" align="center">
+      <img src="./images/1.webp" >
+      <br>Режим баннера</td>
+    </td>
+  </tr>
+  <tr>
+    <td align="center"><img src="./images/3.webp" width="300"><br>Режим оверлея</td>
+    <td align="center"><img src="./images/2.webp" width="300"><br>Режим полноэкранных обоев</td>
+    <td align="center"><img src="./images/4.webp" width="300"><br>Режим сплошного цвета</td>
+  </tr>
+</table>
+<img alt="Lighthouse" src="./docs/images/Lighthouse.png" />
 
 >[!TIP]
 >
@@ -71,7 +83,7 @@
 - [x] **Astro + Tailwind CSS** - Сверхбыстрая генерация статических сайтов на основе современного технологического стека
 - [x] **Плавная анимация** - Анимация переходов между страницами Swup для шелковисто-плавного просмотра
 - [x] **Адаптивный дизайн** - Идеальная адаптация для настольных компьютеров, планшетов и мобильных устройств
-- [x] **Многоязычная поддержка** - Интернационализация i18n UI, поддержка упрощенного китайского, традиционного китайского, английского, японского, русского
+- [x] **Многоязычная поддержка** - Интернационализация i18n UI, поддержка упрощенного китайского, традиционного китайского, английского, японского, русского, корейского
 - [x] **Полнотекстовый поиск** - Клиентский поиск на основе Pagefind, поддержка индексации содержимого статей. 
 
 ### Персонализация
@@ -162,6 +174,7 @@ const SITE_LANG = "zh_CN";
 - `en` - Английский
 - `ja` - Японский
 - `ru` - Русский
+- `ko` - Корейский
 
 
 ### Структура конфигурационных файлов
@@ -169,27 +182,28 @@ const SITE_LANG = "zh_CN";
 ```
 src/
 ├── config/
-│   ├── index.ts              # Индексный файл конфигурации
-│   ├── siteConfig.ts         # Базовая конфигурация сайта
-│   ├── backgroundWallpaper.ts # Конфигурация фоновых обоев
-│   ├── profileConfig.ts      # Конфигурация профиля пользователя
-│   ├── commentConfig.ts      # Конфигурация системы комментариев
-│   ├── announcementConfig.ts # Конфигурация объявлений
-│   ├── licenseConfig.ts      # Конфигурация лицензии
-│   ├── footerConfig.ts       # Конфигурация подвала
-│   ├── FooterConfig.html     # HTML-контент подвала
-│   ├── expressiveCodeConfig.ts # Конфигурация подсветки кода
-│   ├── effectsConfig.ts      # Конфигурация анимационных эффектов (сакура и др.)
-│   ├── fontConfig.ts         # Конфигурация шрифтов
-│   ├── sidebarConfig.ts      # Конфигурация макета боковой панели
-│   ├── navBarConfig.ts       # Конфигурация навигационной панели
-│   ├── musicConfig.ts        # Конфигурация музыкального плеера
-│   ├── pioConfig.ts          # Конфигурация маскота
-│   ├── adConfig.ts           # Конфигурация рекламы
-│   ├── friendsConfig.ts      # Конфигурация дружественных ссылок
-│   ├── galleryConfig.ts      # Конфигурация галереи
-│   ├── sponsorConfig.ts      # Конфигурация спонсоров
-│   └── coverImageConfig.ts   # Конфигурация обложек статей
+│   ├── index.ts                  # Индексный файл конфигурации
+│   ├── siteConfig.ts             # Базовая конфигурация сайта
+│   ├── analyticsConfig.ts        # Конфигурация аналитики
+│   ├── announcementConfig.ts     # Конфигурация объявлений
+│   ├── backgroundWallpaper.ts    # Конфигурация фоновых обоев
+│   ├── commentConfig.ts          # Конфигурация системы комментариев
+│   ├── coverImageConfig.ts       # Конфигурация обложек статей
+│   ├── effectsConfig.ts          # Конфигурация анимационных эффектов (сакура и др.)
+│   ├── expressiveCodeConfig.ts   # Конфигурация подсветки кода
+│   ├── fontConfig.ts             # Конфигурация шрифтов
+│   ├── footerConfig.ts           # Конфигурация подвала
+│   ├── friendsConfig.ts          # Конфигурация дружественных ссылок
+│   ├── galleryConfig.ts          # Конфигурация галереи
+│   ├── licenseConfig.ts          # Конфигурация лицензии
+│   ├── musicConfig.ts            # Конфигурация музыкального плеера
+│   ├── navBarConfig.ts           # Конфигурация навигационной панели
+│   ├── pioConfig.ts              # Конфигурация маскота
+│   ├── mermaidConfig.ts          # Конфигурация диаграмм Mermaid
+│   ├── plantumlConfig.ts         # Конфигурация диаграмм PlantUML
+│   ├── profileConfig.ts          # Конфигурация профиля пользователя
+│   ├── sidebarConfig.ts          # Конфигурация макета боковой панели
+│   └── sponsorConfig.ts          # Конфигурация спонсоров
 ```
 
 
@@ -214,7 +228,7 @@ comment: true    # Включить комментарии
 
 Помимо поддержки [GitHub Flavored Markdown](https://github.github.com/gfm/) по умолчанию в Astro, есть несколько дополнительных функций Markdown:
 
-- Предупреждающие блоки (Admonitions) - Поддержка тем GitHub, Obsidian и VitePress ([Предпросмотр и использование](https://firefly.cuteleaf.cn/posts/markdown-extended/))
+- Предупреждающие блоки (Admonitions) - Поддержка тем GitHub, Obsidian, VitePress и Docusaurus ([Предпросмотр и использование](https://firefly.cuteleaf.cn/posts/markdown-extended/))
 - Карточки репозиториев GitHub ([Предпросмотр и использование](https://firefly.cuteleaf.cn/posts/markdown-extended/))
 - Улучшенные блоки кода на основе Expressive Code ([Предпросмотр](http://firefly.cuteleaf.cn/posts/code-examples/) / [Документация](https://expressive-code.com/))
 
@@ -222,17 +236,17 @@ comment: true    # Включить комментарии
 
 Все команды должны выполняться в корневом каталоге проекта:
 
-| Команда                    | Действие                                            |
-|:---------------------------|:----------------------------------------------------|
-| `pnpm install`             | Установить зависимости                              |
+| Команда                    | Действие                                                  |
+| :------------------------- | :-------------------------------------------------------- |
+| `pnpm install`             | Установить зависимости                                    |
 | `pnpm dev`                 | Запустить локальный сервер разработки на `localhost:4321` |
-| `pnpm build`               | Собрать сайт в `./dist/`                            |
-| `pnpm preview`             | Локальный предварительный просмотр собранного сайта |
-| `pnpm check`               | Проверить код на наличие ошибок                     |
-| `pnpm format`              | Отформатировать код с помощью Biome                 |
-| `pnpm new-post <filename>` | Создать новую статью                                |
-| `pnpm astro ...`           | Выполнить `astro add`, `astro check` и другие команды |
-| `pnpm astro --help`        | Показать справку Astro CLI                          |
+| `pnpm build`               | Собрать сайт в `./dist/`                                  |
+| `pnpm preview`             | Локальный предварительный просмотр собранного сайта       |
+| `pnpm check`               | Проверить код на наличие ошибок                           |
+| `pnpm format`              | Отформатировать код с помощью Biome                       |
+| `pnpm new-post <filename>` | Создать новую статью                                      |
+| `pnpm astro ...`           | Выполнить `astro add`, `astro check` и другие команды     |
+| `pnpm astro --help`        | Показать справку Astro CLI                                |
 
 ## 🙏 Благодарности
 

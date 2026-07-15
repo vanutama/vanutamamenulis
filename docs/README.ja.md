@@ -8,7 +8,7 @@
 > 
 > ![Node.js >= 22](https://img.shields.io/badge/node.js-%3E%3D22-brightgreen) 
 ![pnpm >= 9](https://img.shields.io/badge/pnpm-%3E%3D9-blue)
-![Astro](https://img.shields.io/badge/Astro-6.3.3-orange)
+![Astro](https://img.shields.io/badge/Astro-7.0.7-orange)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.9.2-blue)
 >
 > [![Stars](https://img.shields.io/github/stars/CuteLeaf/Firefly?style=social)](https://github.com/CuteLeaf/Firefly/stargazers)
@@ -35,7 +35,7 @@
 [**📝ドキュメント**](https://docs-firefly.cuteleaf.cn/) /
 [**🍀私のブログ**](https://blog.cuteleaf.cn)
 
-⚡ 静的サイト生成：Astroベースの超高速読み込み速度とSEO最適化
+⚡ 静的サイト生成：Astro ベースの超高速読み込み速度と SEO 最適化
 
 🎨 モダンデザイン：シンプルで美しいインターフェース、カスタマイズ可能なテーマカラー
 
@@ -43,8 +43,20 @@
 
 🔧 高度にカスタマイズ可能：ほとんどの機能モジュールは設定ファイルでカスタマイズ可能
 
-<img alt="firefly" src="./images/1.webp" />
-<img alt="Lighthouse" src="./images/Lighthouse.png" />
+<table width="100%" align="center">
+  <tr>
+    <td colspan="3" align="center">
+      <img src="./images/1.webp" >
+      <br>バナーモード</td>
+    </td>
+  </tr>
+  <tr>
+    <td align="center"><img src="./images/3.webp" width="300"><br>オーバーレイモード</td>
+    <td align="center"><img src="./images/2.webp" width="300"><br>全画面壁紙モード</td>
+    <td align="center"><img src="./images/4.webp" width="300"><br>ソリッドカラーモード</td>
+  </tr>
+</table>
+<img alt="Lighthouse" src="./docs/images/Lighthouse.png" />
 
 >[!TIP]
 >
@@ -69,10 +81,10 @@
 ### コア機能
 
 - [x] **Astro + Tailwind CSS** - モダンな技術スタックベースの超高速静的サイト生成
-- [x] **スムーズなアニメーション** - Swupページトランジションアニメーションで滑らかなブラウジング体験
+- [x] **スムーズなアニメーション** - Swup ページトランジションアニメーションで滑らかなブラウジング体験
 - [x] **レスポンシブデザイン** - デスクトップ、タブレット、モバイルデバイスに完璧に対応
-- [x] **多言語サポート** - i18n国際化UI、簡体字中国語、繁体字中国語、英語、日本語、ロシア語をサポート
-- [x] **全文検索** - Pagefindベースのクライアントサイド検索、記事コンテンツのインデックスをサポート
+- [x] **多言語サポート** - i18n 国際化UI、簡体字中国語、繁体字中国語、英語、日本語、ロシア語、韓国語をサポート
+- [x] **全文検索** - Pagefind ベースのクライアントサイド検索、記事コンテンツのインデックスをサポート
 
 ### パーソナライゼーション
 - [x] **動的サイドバー** - シングルサイドバー、デュアルサイドバー設定をサポート
@@ -82,7 +94,7 @@
 - [x] **ライト/ダークモード** - ライト/ダーク/システム追従の3モードをサポート
 - [x] **ナビゲーションバーのカスタマイズ** - ロゴ、タイトル、リンクを完全カスタマイズ
 - [x] **壁紙モード切り替え** - バナー壁紙、フルスクリーン壁紙、フルスクリーン透明壁紙、単色背景
-- [x] **テーマカラーのカスタマイズ** - 360°色相調整
+- [x] **テーマカラーのカスタマイズ** - 360° 色相調整
 
 
 便利な機能や最適化があれば、[Pull Request](https://github.com/CuteLeaf/Firefly/pulls)を提出してください
@@ -102,7 +114,7 @@
    cd Firefly
    ```
    
-   **まず自分のリポジトリに[Fork](https://github.com/CuteLeaf/Firefly/fork)してからクローン（推奨）。クローンする前にStarをクリックするのを忘れずに！**
+   **まず自分のリポジトリに[Fork](https://github.com/CuteLeaf/Firefly/fork)してからクローン（推奨）。クローンする前に Star をクリックするのを忘れずに！**
 
    ```bash
    git clone https://github.com/you-github-name/Firefly.git
@@ -127,7 +139,7 @@
    ブログは`http://localhost:4321`で利用可能になります
 
 ### プラットフォームホスティングデプロイ
-- **[公式ガイド](https://docs.astro.build/ja/guides/deploy/)を参照して、Vercel、Netlify、Cloudflare Pages、EdgeOne Pagesなどにブログをデプロイしてください。**
+- **[公式ガイド](https://docs.astro.build/ja/guides/deploy/)を参照して、Vercel、Netlify、Cloudflare Pages、EdgeOne Pages などにブログをデプロイしてください。**
 - **Vercel**、**Netlify** などの主要プラットフォームは自動デプロイに対応し、環境に応じて適切なアダプターが自動的に選択されます。
 
    フレームワークプリセット： `Astro`
@@ -162,33 +174,35 @@ const SITE_LANG = "zh_CN";
 - `en` - 英語
 - `ja` - 日本語
 - `ru` - ロシア語
+- `ko` - 韓国語
 
 ### 設定ファイル構造
 
 ```
 src/
 ├── config/
-│   ├── index.ts              # 設定インデックスファイル
-│   ├── siteConfig.ts         # サイト基本設定
-│   ├── backgroundWallpaper.ts # 背景壁紙設定
-│   ├── profileConfig.ts      # ユーザープロフィール設定
-│   ├── commentConfig.ts      # コメントシステム設定
-│   ├── announcementConfig.ts # お知らせ設定
-│   ├── licenseConfig.ts      # ライセンス設定
-│   ├── footerConfig.ts       # フッター設定
-│   ├── FooterConfig.html     # フッターHTMLコンテンツ
-│   ├── expressiveCodeConfig.ts # コードハイライト設定
-│   ├── effectsConfig.ts      # アニメーションエフェクト設定（桜など）
-│   ├── fontConfig.ts         # フォント設定
-│   ├── sidebarConfig.ts      # サイドバーレイアウト設定
-│   ├── navBarConfig.ts       # ナビゲーションバー設定
-│   ├── musicConfig.ts        # 音楽プレーヤー設定
-│   ├── pioConfig.ts          # マスコット設定
-│   ├── adConfig.ts           # 広告設定
-│   ├── friendsConfig.ts      # 友人リンク設定
-│   ├── galleryConfig.ts      # ギャラリー設定
-│   ├── sponsorConfig.ts      # スポンサー設定
-│   └── coverImageConfig.ts   # 記事カバー画像設定
+│   ├── index.ts                  # 設定インデックスファイル
+│   ├── siteConfig.ts             # サイト基本設定
+│   ├── analyticsConfig.ts        # アナリティクス設定
+│   ├── announcementConfig.ts     # お知らせ設定
+│   ├── backgroundWallpaper.ts    # 背景壁紙設定
+│   ├── commentConfig.ts          # コメントシステム設定
+│   ├── coverImageConfig.ts       # カバー画像設定
+│   ├── effectsConfig.ts          # アニメーションエフェクト設定（桜など）
+│   ├── expressiveCodeConfig.ts   # コードハイライト設定
+│   ├── fontConfig.ts             # フォント設定
+│   ├── footerConfig.ts           # フッター設定
+│   ├── friendsConfig.ts          # 友人リンク設定
+│   ├── galleryConfig.ts          # ギャラリー設定
+│   ├── licenseConfig.ts          # ライセンス設定
+│   ├── musicConfig.ts            # 音楽プレーヤー設定
+│   ├── navBarConfig.ts           # ナビゲーションバー設定
+│   ├── pioConfig.ts              # マスコット設定
+│   ├── mermaidConfig.ts          # Mermaid 図表設定
+│   ├── plantumlConfig.ts         # PlantUML 図表設定
+│   ├── profileConfig.ts          # ユーザープロフィール設定
+│   ├── sidebarConfig.ts          # サイドバーレイアウト設定
+│   └── sponsorConfig.ts          # スポンサー設定
 ```
 
 ## ⚙️ 記事のFrontmatter
@@ -202,41 +216,41 @@ image: ./cover.jpg  # または「api」を使用してランダムカバー画�
 tags: [Foo, Bar]
 category: Front-end
 draft: false
-lang: zh-CN      # 記事の言語が`siteConfig.ts`のサイト言語と異なる場合のみ設定
+lang: zh-CN      # 記事の言語が `siteConfig.ts` のサイト言語と異なる場合のみ設定
 pinned: false    # 記事を固定
 comment: true    # コメントを有効化
 ---
 ```
 
-## � Markdown拡張
+## 🧩 Markdown拡張
 
-Astroがデフォルトで対応している[GitHub Flavored Markdown](https://github.github.com/gfm/)に加えて、いくつかの追加のMarkdown機能があります：
+Astro がデフォルトで対応している[GitHub Flavored Markdown](https://github.github.com/gfm/)に加えて、いくつかの追加の Markdown 機能があります：
 
-- Admonitions（予告ブロック） - GitHub、Obsidian、VitePressの3つのテーマ設定をサポート ([プレビューと使用方法](https://firefly.cuteleaf.cn/posts/markdown-extended/))
-- GitHubリポジトリカード ([プレビューと使用方法](https://firefly.cuteleaf.cn/posts/markdown-extended/))
-- Expressive Codeベースの強化コードブロック ([プレビュー](http://firefly.cuteleaf.cn/posts/code-examples/) / [ドキュメント](https://expressive-code.com/))
+- Admonitions（予告ブロック） - GitHub、Obsidian、VitePress、Docusaurus の4つのテーマ設定をサポート ([プレビューと使用方法](https://firefly.cuteleaf.cn/posts/markdown-extended/))
+- GitHub リポジトリカード ([プレビューと使用方法](https://firefly.cuteleaf.cn/posts/markdown-extended/))
+- Expressive Code ベースの強化コードブロック ([プレビュー](http://firefly.cuteleaf.cn/posts/code-examples/) / [ドキュメント](https://expressive-code.com/))
 
-## �🧞 コマンド
+## 🧞 コマンド
 
 すべてのコマンドはプロジェクトルートディレクトリで実行する必要があります：
 
-| Command                    | Action                                              |
-|:---------------------------|:----------------------------------------------------|
-| `pnpm install`             | 依存関係をインストール                               |
-| `pnpm dev`                 | `localhost:4321`でローカル開発サーバーを起動        |
-| `pnpm build`               | `./dist/`にサイトをビルド                           |
-| `pnpm preview`             | ビルドされたサイトをローカルでプレビュー            |
-| `pnpm check`               | コード内のエラーをチェック                          |
-| `pnpm format`              | Biomeを使用してコードをフォーマット                 |
-| `pnpm new-post <filename>` | 新しい記事を作成                                    |
-| `pnpm astro ...`           | `astro add`、`astro check`などのコマンドを実行      |
-| `pnpm astro --help`        | Astro CLIヘルプを表示                               |
+| Command                    | Action                                          |
+| :------------------------- | :---------------------------------------------- |
+| `pnpm install`             | 依存関係をインストール                          |
+| `pnpm dev`                 | `localhost:4321`でローカル開発サーバーを起動    |
+| `pnpm build`               | `./dist/`にサイトをビルド                       |
+| `pnpm preview`             | ビルドされたサイトをローカルでプレビュー        |
+| `pnpm check`               | コード内のエラーをチェック                      |
+| `pnpm format`              | Biome を使用してコードをフォーマット            |
+| `pnpm new-post <filename>` | 新しい記事を作成                                |
+| `pnpm astro ...`           | `astro add`、`astro check` などのコマンドを実行 |
+| `pnpm astro --help`        | Astro CLI ヘルプを表示                          |
 
 ## 🙏 謝辞
 
-[fuwari](https://github.com/saicaca/fuwari)テンプレートを開発した[saicaca](https://github.com/saicaca)に深く感謝します。Fireflyはこのテンプレートをベースに二次開発されています。
+[fuwari](https://github.com/saicaca/fuwari) テンプレートを開発した[saicaca](https://github.com/saicaca)に深く感謝します。Firefly はこのテンプレートをベースに二次開発されています。
 
-蛍関連の画像素材の著作権はゲーム[「崩壊：スターレイル」](https://sr.mihoyo.com/)の開発元[miHoYo](https://www.mihoyo.com/)に帰属します。
+蛍関連の画像素材の著作権はゲーム[「崩壊：スターレイル」](https://sr.mihoyo.com/)の開発元 [miHoYo](https://www.mihoyo.com/) に帰属します。
 
 ### 技術スタック
 
@@ -253,7 +267,7 @@ Astroがデフォルトで対応している[GitHub Flavored Markdown](https://g
 
 ### その他の参考
 - ブロガー`霞葉`の [Bangumi コレクション](https://kasuha.com/posts/fuwari-enhance-ep2/) ページコンポーネント
-- Bilibiliクリエイター `公公的日常` のQ版 [蛍看板娘Spineモデル](https://www.bilibili.com/video/BV1fuVzzdE5y)
+- Bilibili クリエイター `公公的日常` のQ版 [蛍看板娘 Spine モデル](https://www.bilibili.com/video/BV1fuVzzdE5y)
 
 ## 📝 ライセンス
 
@@ -265,7 +279,7 @@ Astroがデフォルトで対応している[GitHub Flavored Markdown](https://g
 - Copyright (c) 2024 [saicaca](https://github.com/saicaca) - [fuwari](https://github.com/saicaca/fuwari)
 - Copyright (c) 2025 [CuteLeaf](https://github.com/CuteLeaf) - [Firefly](https://github.com/CuteLeaf/Firefly)
 
-MITライセンスに基づき、コードの自由な使用、変更、配布が許可されていますが、上記の著作権表示を保持する必要があります。
+MIT ライセンスに基づき、コードの自由な使用、変更、配布が許可されていますが、上記の著作権表示を保持する必要があります。
 
 ## 🍀 貢献者
 

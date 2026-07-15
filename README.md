@@ -8,7 +8,7 @@
 > 
 > ![Node.js >= 22](https://img.shields.io/badge/node.js-%3E%3D22-brightgreen) 
 ![pnpm >= 9](https://img.shields.io/badge/pnpm-%3E%3D9-blue)
-![Astro](https://img.shields.io/badge/Astro-6.3.3-orange)
+![Astro](https://img.shields.io/badge/Astro-7.0.7-orange)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.9.2-blue)
 >
 > [![Stars](https://img.shields.io/github/stars/CuteLeaf/Firefly?style=social)](https://github.com/CuteLeaf/Firefly/stargazers)
@@ -21,7 +21,7 @@
 > 
 > ![GitHub License](https://img.shields.io/github/license/CuteLeaf/Firefly)
 [![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/CuteLeaf/Firefly)
-[![爱发电赞助](https://img.shields.io/badge/爱发电-赞助作者-ff69b4.svg)](https://ifdian.net/a/cuteleaf)
+[![爱发电打赏](https://img.shields.io/badge/爱发电-打赏作者-ff69b4.svg)](https://ifdian.net/a/cuteleaf)
 
 </div>
 
@@ -35,7 +35,7 @@
 [**📝使用文档**](https://docs-firefly.cuteleaf.cn/) /
 [**🍀我的博客**](https://blog.cuteleaf.cn) 
 
-⚡ 静态站点生成: 基于Astro的超快加载速度和SEO优化
+⚡ 静态站点生成: 基于 Astro 的超快加载速度和 SEO 优化
 
 🎨 现代化设计: 简洁美观的界面，支持自定义主题色
 
@@ -43,7 +43,19 @@
 
 🔧 高度可配置: 大部分功能模块均可通过配置文件自定义
 
-<img alt="firefly" src="./docs/images/1.webp" />
+<table width="100%" align="center">
+  <tr>
+    <td colspan="3" align="center">
+      <img src="./docs/images/1.webp" >
+      <br>横幅模式</td>
+    </td>
+  </tr>
+  <tr>
+    <td align="center"><img src="./docs/images/3.webp" width="300"><br>透明模式</td>
+    <td align="center"><img src="./docs/images/2.webp" width="300"><br>全屏壁纸模式</td>
+    <td align="center"><img src="./docs/images/4.webp" width="300"><br>纯色模式</td>
+  </tr>
+</table>
 <img alt="Lighthouse" src="./docs/images/Lighthouse.png" />
 
 >[!TIP]
@@ -62,7 +74,7 @@
 >
 >**更多布局配置及演示请查看：[Firefly 布局系统详解](https://firefly.cuteleaf.cn/posts/firefly-layout-system/)**
 >
->Firefly 支持i18n多语言UI，但除了简体中文，其他语言均为AI翻译转换，如有错误，欢迎提交 [Pull Request](https://github.com/CuteLeaf/Firefly/pulls) 修正。
+>Firefly 支持 i18n 多语言 UI，但除了简体中文，其他语言均为 AI 翻译转换，如有错误，欢迎提交 [Pull Request](https://github.com/CuteLeaf/Firefly/pulls) 修正。
 
 ## ✨ 功能特性
 
@@ -71,7 +83,7 @@
 - [x] **Astro + Tailwind CSS** - 基于现代技术栈的超快静态站点生成
 - [x] **流畅动画** - Swup 页面过渡动画，提供丝滑的浏览体验
 - [x] **响应式设计** - 完美适配桌面端、平板和移动设备
-- [x] **多语言支持** - i18n 国际化，UI支持简体中文、繁体中文、英文、日文、俄语
+- [x] **多语言支持** - i18n 国际化，UI 支持简体中文、繁体中文、英文、日文、俄语、韩文
 - [x] **全文搜索** - 基于 Pagefind 的客户端搜索，支持文章内容索引
 
 ### 个性化
@@ -101,7 +113,7 @@
    cd Firefly
    ```
    
-   **先 [Fork](https://github.com/CuteLeaf/Firefly/fork) 到自己仓库在克隆（推荐），记得先点 Star 在 Fork 哦！**
+   **先 [Fork](https://github.com/CuteLeaf/Firefly/fork) 到自己仓库再克隆（推荐），记得先点 Star 再 Fork 哦！**
 
    ```bash
    git clone https://github.com/you-github-name/Firefly.git
@@ -124,6 +136,9 @@
    pnpm dev
    ```
    博客将在 `http://localhost:4321` 可用
+   
+### 社区教程
+Cloudflare Workers 部署：[【不用服务器，无需备案，零成本搭建一个自己的个人博客】](https://www.bilibili.com/video/BV1hX9XBKEhm)
 
 ### 平台托管部署
 - **参考[官方指南](https://docs.astro.build/zh-cn/guides/deploy/)将博客部署至 Vercel, Netlify, Cloudflare Pages, EdgeOne Pages 等。**
@@ -144,7 +159,7 @@
 
 ## 📖 配置说明
 
-> 📚 **详细配置文档**: 查看 [Firefly使用文档](https://docs-firefly.cuteleaf.cn/) 获取完整的配置指南
+> 📚 **详细配置文档**: 查看 [Firefly 使用文档](https://docs-firefly.cuteleaf.cn/) 获取完整的配置指南
 
 ### 设置网站语言
 
@@ -161,33 +176,35 @@ const SITE_LANG = "zh_CN";
 - `en` - 英文
 - `ja` - 日文
 - `ru` - 俄文
+- `ko` - 韩文
 
 ### 配置文件结构
 
 ```
 src/
 ├── config/
-│   ├── index.ts              # 配置索引文件
-│   ├── siteConfig.ts         # 站点基础配置
-│   ├── backgroundWallpaper.ts # 背景壁纸配置
-│   ├── profileConfig.ts      # 用户资料配置
-│   ├── commentConfig.ts      # 评论系统配置
-│   ├── announcementConfig.ts # 公告配置
-│   ├── licenseConfig.ts      # 许可证配置
-│   ├── footerConfig.ts       # 页脚配置
-│   ├── FooterConfig.html     # 页脚HTML内容
-│   ├── expressiveCodeConfig.ts # 代码高亮配置
-│   ├── effectsConfig.ts      # 动画特效配置（樱花等）
-│   ├── fontConfig.ts         # 字体配置
-│   ├── sidebarConfig.ts      # 侧边栏布局配置
-│   ├── navBarConfig.ts       # 导航栏配置
-│   ├── musicConfig.ts        # 音乐播放器配置
-│   ├── pioConfig.ts          # 看板娘配置
-│   ├── adConfig.ts           # 广告配置
-│   ├── friendsConfig.ts      # 友链配置
-│   ├── galleryConfig.ts      # 相册配置
-│   ├── sponsorConfig.ts      # 赞助配置
-│   └── coverImageConfig.ts  # 文章封面图配置
+│   ├── index.ts                  # 配置索引文件
+│   ├── siteConfig.ts             # 站点基础配置
+│   ├── analyticsConfig.ts        # 统计分析配置
+│   ├── announcementConfig.ts     # 公告配置
+│   ├── backgroundWallpaper.ts    # 背景壁纸配置
+│   ├── commentConfig.ts          # 评论系统配置
+│   ├── coverImageConfig.ts       # 封面图配置
+│   ├── effectsConfig.ts          # 动画特效配置（樱花等）
+│   ├── expressiveCodeConfig.ts   # 代码高亮配置
+│   ├── fontConfig.ts             # 字体配置
+│   ├── footerConfig.ts           # 页脚配置
+│   ├── friendsConfig.ts          # 友链配置
+│   ├── galleryConfig.ts          # 相册配置
+│   ├── licenseConfig.ts          # 许可证配置
+│   ├── musicConfig.ts            # 音乐播放器配置
+│   ├── navBarConfig.ts           # 导航栏配置
+│   ├── pioConfig.ts              # 看板娘配置
+│   ├── mermaidConfig.ts          # Mermaid 图表配置
+│   ├── plantumlConfig.ts         # PlantUML 图表配置
+│   ├── profileConfig.ts          # 用户资料配置
+│   ├── sidebarConfig.ts          # 侧边栏布局配置
+│   └── sponsorConfig.ts          # 打赏配置
 ```
 
 ## ⚙️ 文章 Frontmatter
@@ -211,7 +228,7 @@ comment: true    # 是否允许评论
 
 除了 Astro 默认支持的 [GitHub Flavored Markdown](https://github.github.com/gfm/) 之外，还包含了一些额外的 Markdown 功能：
 
-- 提醒块（Admonitions） - 支持 GitHub, Obsidian, VitePress 三种风格主题配置 ([预览和用法](https://firefly.cuteleaf.cn/posts/markdown-extended/))
+- 提醒块（Admonitions） - 支持 GitHub, Obsidian, VitePress, Docusaurus 四种风格主题配置 ([预览和用法](https://firefly.cuteleaf.cn/posts/markdown-extended/))
 - GitHub 仓库卡片 ([预览和用法](https://firefly.cuteleaf.cn/posts/markdown-extended/))
 - 基于 Expressive Code 的增强代码块 ([预览](http://firefly.cuteleaf.cn/posts/code-examples/) / [文档](https://expressive-code.com/))
 
@@ -219,17 +236,17 @@ comment: true    # 是否允许评论
 
 下列指令均需要在项目根目录执行：
 
-| Command                    | Action                                              |
-|:---------------------------|:----------------------------------------------------|
+| Command                    | Action                                 |
+| :------------------------- | :------------------------------------- |
 | `pnpm install`             | 安装依赖                               |
-| `pnpm dev`                 | 在 `localhost:4321` 启动本地开发服务器        |
-| `pnpm build`               | 构建网站至 `./dist/`            |
-| `pnpm preview`             | 本地预览已构建的网站        |
-| `pnpm check`               | 检查代码中的错误                 |
-| `pnpm format`              | 使用Biome格式化您的代码                        |
-| `pnpm new-post <filename>` | 创建新文章                                   |
-| `pnpm astro ...`           | 执行 `astro add`, `astro check` 等指令    |
-| `pnpm astro --help`        | 显示 Astro CLI 帮助                        |
+| `pnpm dev`                 | 在 `localhost:4321` 启动本地开发服务器 |
+| `pnpm build`               | 构建网站至 `./dist/`                   |
+| `pnpm preview`             | 本地预览已构建的网站                   |
+| `pnpm check`               | 检查代码中的错误                       |
+| `pnpm format`              | 使用 Biome 格式化您的代码              |
+| `pnpm new-post <filename>` | 创建新文章                             |
+| `pnpm astro ...`           | 执行 `astro add`, `astro check` 等指令 |
+| `pnpm astro --help`        | 显示 Astro CLI 帮助                    |
 
 ## 🙏 致谢
 
@@ -252,7 +269,7 @@ comment: true    # 是否允许评论
 
 ### 其他参考
 - 博主`霞葉`的 [Bangumi 收藏](https://kasuha.com/posts/fuwari-enhance-ep2/) 页面组件
-- 哔哩哔哩up主 `公公的日常` 的Q版 [流萤看板娘Spine切片数据](https://www.bilibili.com/video/BV1fuVzzdE5y) 
+- 哔哩哔哩up主 `公公的日常` 的Q版 [流萤看板娘 Spine 切片数据](https://www.bilibili.com/video/BV1fuVzzdE5y) 
 
 ## 📝 许可协议
 

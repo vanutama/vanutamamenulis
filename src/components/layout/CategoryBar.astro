@@ -15,6 +15,30 @@ const categories = await getCategoryList();
 const totalPosts = (await getSortedPostsList()).length;
 const homeUrl = url("/");
 const archiveUrl = url("/archive/");
+
+// 服务端计算初始高亮 pill（首屏无需等 JS）。
+// 查询串筛选（?category=/?tag=/?uncategorized）在静态页构建期不可知，
+// 交由客户端脚本在加载/导航时同步；此处只处理路径可确定的情况。
+const pathname = Astro.url.pathname.replace(/\/$/, "");
+const homePath = homeUrl.replace(/\/$/, "");
+const archivePath = archiveUrl.replace(/\/$/, "");
+const isHome = pathname === homePath || pathname === "" || pathname === "/";
+const isCategories = pathname === "/categories";
+const isArchive = pathname === archivePath;
+const postCategory = (currentPostCategory || "").trim();
+
+// 返回某个 pill 的初始高亮属性：active（强）或 soft-active（弱，文章页所属分类）
+function initialActive(categoryName: string): {
+	active?: boolean;
+	soft?: boolean;
+} {
+	if (isHome) return categoryName === "" ? { active: true } : {};
+	if (isCategories)
+		return categoryName === "__categories__" ? { active: true } : {};
+	if (isArchive) return categoryName === "__archive__" ? { active: true } : {};
+	if (postCategory && categoryName === postCategory) return { soft: true };
+	return {};
+}
 ---
 
 <div
@@ -27,46 +51,68 @@ const archiveUrl = url("/archive/");
   <div class="category-bar-inner flex gap-2">
     <a
       href={homeUrl}
-      class="category-pill text-sm px-2 py-1 rounded-lg shrink-0
+      class="category-pill text-sm px-3 py-1.5 rounded-full shrink-0
              transition-colors duration-150 ease-out flex items-center justify-center"
       data-category-name=""
+      data-active={initialActive("").active ? "" : undefined}
       aria-label={i18n(I18nKey.home)}
     >
-      <Icon name="material-symbols:home" class="text-lg" />
+      <Icon is:inline name="material-symbols:home" class="text-lg" />
     </a>
     <a
       href={archiveUrl}
-      class="category-pill text-sm px-3 py-1 rounded-lg whitespace-nowrap shrink-0
+      class="category-pill text-sm px-4 py-1.5 rounded-full whitespace-nowrap shrink-0
              transition-colors duration-150 ease-out flex items-center justify-center"
       data-category-name="__archive__"
+      data-active={initialActive("__archive__").active ? "" : undefined}
     >
       {i18n(I18nKey.archive)}
-      <span class="text-xs opacity-60 ml-1">{totalPosts}</span>
+      <span class="pill-count">{totalPosts}</span>
     </a>
     <div class="category-divider shrink-0"></div>
     <div class="scroll-area relative">
       <div class="scroll-fade scroll-fade-left" aria-hidden="true"></div>
       <div class="category-scroll flex gap-2 overflow-x-auto">
         {
-          categories.map((cat) => (
+          categories.map((cat) => {
+            const active = initialActive(cat.name);
+            return (
             <a
               href={cat.url}
-              class="category-pill text-sm px-3 py-1 rounded-lg whitespace-nowrap
+              class="category-pill text-sm px-4 py-1.5 rounded-full whitespace-nowrap
                      transition-colors duration-150 ease-out flex items-center justify-center"
               data-category-name={cat.name}
+              data-active={active.active ? "" : undefined}
+              data-soft-active={active.soft ? "" : undefined}
             >
               {cat.name}
-              <span class="text-xs opacity-60 ml-1">{cat.count}</span>
+              <span class="pill-count">{cat.count}</span>
             </a>
-          ))
+            );
+          })
         }
       </div>
       <div class="scroll-fade scroll-fade-right" aria-hidden="true"></div>
     </div>
+    <div class="category-divider shrink-0 more-divider" aria-hidden="true"></div>
+    <a
+      href={url("/categories/")}
+      class="category-pill text-sm px-3 py-1.5 rounded-full shrink-0
+             transition-colors duration-150 ease-out flex items-center justify-center gap-1"
+      data-category-name="__categories__"
+      data-active={initialActive("__categories__").active ? "" : undefined}
+      aria-label={i18n(I18nKey.more)}
+    >
+      <span>{i18n(I18nKey.more)}</span>
+      <Icon is:inline name="fa7-solid:chevron-right" class="text-sm" />
+    </a>
   </div>
 </div>
 
 <style>
+  .category-bar .category-pill {
+    border: none;
+  }
   .category-bar {
     margin-bottom: 1rem;
   }
@@ -74,6 +120,14 @@ const archiveUrl = url("/archive/");
     width: 1px;
     align-self: stretch;
     background: var(--line-divider);
+    opacity: 0.5;
+  }
+  .more-divider {
+    opacity: 0;
+    transition: opacity 300ms ease-in-out;
+  }
+  .more-divider[data-visible] {
+    opacity: 0.5;
   }
   .scroll-area {
     flex: 1;
@@ -112,42 +166,6 @@ const archiveUrl = url("/archive/");
   .category-scroll::-webkit-scrollbar {
     display: none;
   }
-  .category-pill {
-    border: 1.5px solid var(--line-divider);
-    color: var(--btn-content);
-    background: transparent;
-  }
-  .category-pill:hover {
-    border-color: var(--primary);
-    color: var(--primary);
-    background: transparent;
-  }
-  .category-pill[data-active] {
-    background: var(--primary);
-    border-color: var(--primary);
-    color: white;
-  }
-  .category-pill[data-soft-active] {
-    border-color: var(--line-divider);
-    background: color-mix(in srgb, var(--primary) 10%, transparent);
-    color: color-mix(in srgb, var(--primary) 72%, var(--btn-content));
-  }
-  .category-pill[data-soft-active]:hover {
-    border-color: var(--line-divider);
-    background: color-mix(in srgb, var(--primary) 15%, transparent);
-    color: color-mix(in srgb, var(--primary) 82%, var(--btn-content));
-  }
-  .category-pill[data-soft-active][data-active],
-  .category-pill[data-soft-active][data-active]:hover {
-    border-color: var(--line-divider);
-    background: color-mix(in srgb, var(--primary) 15%, transparent);
-    color: color-mix(in srgb, var(--primary) 82%, var(--btn-content));
-  }
-  .category-pill[data-active]:hover {
-    background: var(--primary);
-    border-color: var(--primary);
-    opacity: 0.9;
-  }
 </style>
 
 <script>
@@ -159,10 +177,12 @@ const archiveUrl = url("/archive/");
     const archivePath = (bar.getAttribute("data-archive-path") || "/archive").replace(/\/$/, "");
     const isHome = pathname === homePath || pathname === "" || pathname === "/";
     const isArchive = pathname === archivePath;
+    const isCategories = pathname === "/categories";
 
     return {
       isHome,
       isArchive,
+      isCategories,
       activeCategory: currentUrl.searchParams.get("category") || "",
       hasTag: currentUrl.searchParams.has("tag"),
       hasUncategorized: currentUrl.searchParams.has("uncategorized"),
@@ -170,7 +190,7 @@ const archiveUrl = url("/archive/");
   }
 
   function setActiveCategory(bar: HTMLElement, currentUrl: URL) {
-    const { isHome, isArchive, activeCategory, hasTag, hasUncategorized } =
+    const { isHome, isArchive, isCategories, activeCategory, hasTag, hasUncategorized } =
       getCategoryBarState(bar, currentUrl);
     const postCategory = (bar.getAttribute("data-current-post-category") || "").trim();
 
@@ -182,6 +202,12 @@ const archiveUrl = url("/archive/");
 
     if (isHome) {
       bar.querySelector<HTMLAnchorElement>('.category-pill[data-category-name=""]')
+        ?.setAttribute("data-active", "");
+      return;
+    }
+
+    if (isCategories) {
+      bar.querySelector<HTMLAnchorElement>('.category-pill[data-category-name="__categories__"]')
         ?.setAttribute("data-active", "");
       return;
     }
@@ -348,6 +374,16 @@ const archiveUrl = url("/archive/");
       fadeRight.setAttribute("data-visible", "");
     } else {
       fadeRight.removeAttribute("data-visible");
+    }
+
+    // 分类溢出时显示"更多"按钮前的分割线
+    const moreDivider = bar.querySelector<HTMLElement>(".more-divider");
+    if (moreDivider) {
+      if (hasOverflow) {
+        moreDivider.setAttribute("data-visible", "");
+      } else {
+        moreDivider.removeAttribute("data-visible");
+      }
     }
   }
 

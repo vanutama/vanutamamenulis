@@ -9,6 +9,7 @@
     "strictNullChecks": true,
     "allowJs": false,
     "declaration": true,
+    "noUncheckedSideEffectImports": false,
     "plugins": [
       {
         "name": "@astrojs/ts-plugin"
@@ -16,25 +17,25 @@
     ],
     "paths": {
       "@components/*": [
-        "src/components/*"
+        "./src/components/*"
       ],
       "@assets/*": [
-        "src/assets/*"
+        "./src/assets/*"
       ],
       "@constants/*": [
-        "src/constants/*"
+        "./src/constants/*"
       ],
       "@utils/*": [
-        "src/utils/*"
+        "./src/utils/*"
       ],
       "@i18n/*": [
-        "src/i18n/*"
+        "./src/i18n/*"
       ],
       "@layouts/*": [
-        "src/layouts/*"
+        "./src/layouts/*"
       ],
       "@/*": [
-        "src/*"
+        "./src/*"
       ]
     }
   },

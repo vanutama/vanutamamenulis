@@ -3,7 +3,6 @@ import { getCollection } from "astro:content";
 import * as fs from "node:fs";
 import type { APIContext, GetStaticPaths } from "astro";
 import satori from "satori";
-import sharp from "sharp";
 import { removeFileExtension } from "@/utils/url-utils";
 
 import { profileConfig } from "../../config/profileConfig";
@@ -22,7 +21,7 @@ interface FontOptions {
 export const prerender = true;
 
 export const getStaticPaths: GetStaticPaths = async () => {
-	if (!siteConfig.generateOgImages) {
+	if (!siteConfig.post.generateOgImages) {
 		return [];
 	}
 
@@ -33,7 +32,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 		// 将 id 转换为 slug（移除扩展名）以匹配路由参数
 		const slug = removeFileExtension(post.id);
 		return {
-			params: { slug },
+			params: { slug: `${slug}.png` },
 			props: { post },
 		};
 	});
@@ -343,6 +342,7 @@ export async function GET({
 		fonts,
 	});
 
+	const sharp = (await import("sharp")).default;
 	const png = await sharp(Buffer.from(svg)).png().toBuffer();
 
 	return new Response(new Uint8Array(png), {
