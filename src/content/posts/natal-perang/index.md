@@ -17,7 +17,7 @@ _Kelahiran Yesus bukan sekadar kisah indah tentang bayi di palungan, melainkan s
 
 ## 🌟 Invasi Ilahi yang Dimulai di Betlehem
 
-Setiap Desember, jutaan orang Kristen merayakan Natal dengan penuh sukacita. Namun, jika kita membaca narasi Natal dengan lebih cermat, sebuah pertanyaan mengganggu muncul: Mengapa kelahiran seorang bayi memicu pembantaian massal? Mengapa Raja Herodes begitu ketakutan sehingga memerintahkan pembunuhan semua anak laki-laki berusia dua tahun ke bawah di Betlehem? Mengapa malaikat yang mengumumkan kelahiran ini datang bersama "sejumlah besar bala tentara sorga" (Lukas 2:13)?
+Setiap Desember, jutaan orang Kristen merayakan Natal dengan penuh sukacita. Namun, jika kita membaca narasi Natal dengan lebih cermat, sebuah pertanyaan mengganggu muncul: Mengapa kelahiran seorang bayi memicu pembantaian massal? Mengapa Raja Herodes begitu ketakutan sehingga memerintahkan pembunuhan semua anak laki-laki berusia dua tahun ke bawah di Betlehem? Mengapa malaikat yang mengumumkan kelahiran ini datang bersama "sejumlah besar bala tentara sorga" (Lukas 2.13)?
 
 Jawabannya mengubah segalanya: Natal bukan sekadar cerita manis tentang bayi di palungan. Ini adalah momen ketika Allah menyatakan perang terbuka terhadap kuasa kegelapan yang telah mendominasi dunia sejak kejatuhan manusia.
 
@@ -31,7 +31,7 @@ Pemberontakan kosmis ini dan konsekuensinya bagi umat manusia adalah latar belak
 
 Dengan kerangka pemahaman ini, mari kita mulai perjalanan kita dengan mengeksplorasi latar belakang kosmis yang membuat kelahiran Yesus menjadi deklarasi perang yang mengubah segalanya.
 
-Untuk memahami mengapa Natal adalah deklarasi perang, kita perlu mundur ke peristiwa yang sering dilupakan dalam narasi Alkitab. Menurut Ulangan 32:8-9, setelah pemberontakan di Menara Babel, Allah membagi-bagikan bangsa-bangsa dan "mewariskan" mereka kepada makhluk-makhluk surgawi yang disebut _bene elohim_ (dalam manuskrip yang lebih kuno: "anak-anak Allah" bukan "anak-anak Israel"). Sementara bangsa-bangsa lain diberikan kepada para _elohim_ ini, Allah memilih Israel sebagai milik pusaka-Nya sendiri.
+Untuk memahami mengapa Natal adalah deklarasi perang, kita perlu mundur ke peristiwa yang sering dilupakan dalam narasi Alkitab. Menurut Ulangan 32.8-9, setelah pemberontakan di Menara Babel, Allah membagi-bagikan bangsa-bangsa dan "mewariskan" mereka kepada makhluk-makhluk surgawi yang disebut _bene elohim_ (dalam manuskrip yang lebih kuno: "anak-anak Allah" bukan "anak-anak Israel"). Sementara bangsa-bangsa lain diberikan kepada para _elohim_ ini, Allah memilih Israel sebagai milik pusaka-Nya sendiri.
 
 Namun, tragedi terjadi. Para _elohim_ yang dipercayakan untuk mengawasi bangsa-bangsa ini memberontak. Mazmur 82 menggambarkan Allah menghakimi mereka (dewan ilahi) yang telah menyimpang dan menyesatkan bangsa-bangsa dalam kegelapan.
 
