@@ -50,17 +50,18 @@ export const siteConfig: SiteConfig = {
 		followTheme: false,
 	},
 
-  // Favicon 配置
-  favicon: [
-    {
-      // 图标文件路径
-      src: "/favicon/favicon.ico",
-      // 可选，指定主题 'light' | 'dark'
-      // theme: "light",
-      // 可选，图标大小
-      // sizes: "32x32",
-    },
-  ],
+	// Favicon 配置
+	// 如果启用了OpenGraph图片功能，数组中需要包含png格式的favicon图标
+	favicon: [
+		{
+			// 图标文件路径
+			src: "/favicon/favicon.ico",
+			// 可选，指定主题 'light' | 'dark'
+			// theme: "light",
+			// 可选，图标大小
+			// sizes: "32x32",
+		},
+	],
 
 	// 导航栏配置
 	navbar: {
@@ -106,7 +107,9 @@ export const siteConfig: SiteConfig = {
 		// 相册页面开关
 		gallery: false,
 		// 追番页面开关
-		anime: false,
+		anime: true,
+		// 动态页面开关
+		dynamic: true,
 	},
 
   // 分类导航栏开关，在首页和归档页顶部显示分类快捷导航
