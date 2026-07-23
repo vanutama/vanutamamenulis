@@ -27,15 +27,13 @@ export const siteConfig: SiteConfig = {
     "Vanutama",
   ],
 
-  // 主题色
-  themeColor: {
-    // 主题色的默认色相，范围从 0 到 360。例如：红色：0，青色：200，蓝绿色：250，粉色：345
-    hue: 70,
-    // 是否对访问者隐藏主题色选择器
-    fixed: false,
-    // 默认模式："light" 亮色，"dark" 暗色，"system" 跟随系统
-    defaultMode: "dark",
-  },
+	// 主题色
+	themeColor: {
+		// 主题色的默认色相，范围从 0 到 360。例如：红色：0，青色：200，蓝绿色：250，粉色：345
+		hue: 165,
+		// 默认模式："light" 亮色，"dark" 暗色，"system" 跟随系统
+		defaultMode: "system",
+	},
 
   // 页面整体宽度（单位：rem）
   // 数值越大可以让页面内容区域更宽
@@ -124,8 +122,6 @@ export const siteConfig: SiteConfig = {
 		defaultMode: "list",
 		// 移动端默认布局模式，不设置则跟随 defaultMode
 		mobileDefaultMode: "grid",
-		// 是否允许用户切换布局
-		allowSwitch: true,
 		// 文章简介显示行数，设为 0 则不截断
 		descriptionLines: 2,
 		// 文章卡片底部统计和发布日期是否显示图标
@@ -204,6 +200,10 @@ export const siteConfig: SiteConfig = {
 		// 可选值: "anime" | "book" | "music" | "game" | "real" (暂不支持"real"类型)
 		// 未列出的类型将按默认顺序排在后面
 		categoryOrder: ["anime", "book", "music", "game"],
+		// 控制各分类的启用状态（true/false），未指定的分类默认启用
+		// categories: {
+		// 	game: false, // 禁用游戏分类显示
+		// },
 	},
 
 	// 追番配置（Bilibili + TMDB）
