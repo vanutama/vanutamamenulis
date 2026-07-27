@@ -18,6 +18,7 @@ import katex from "katex";
 import "katex/dist/contrib/mhchem.mjs"; // 加载 mhchem 扩展
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import rehypeCallouts from "rehype-callouts";
+import rehypeCodeGroup from "rehype-code-group"; /* Tab 代码块 */
 import rehypeComponents from "rehype-components"; /* Render the custom directive content */
 import rehypeKatex from "rehype-katex";
 import rehypeSlug from "rehype-slug";
@@ -49,6 +50,7 @@ import { remarkImageGrid } from "./src/plugins/remark-image-grid.js";
 import { remarkMermaid } from "./src/plugins/remark-mermaid.js";
 import { remarkPlantuml } from "./src/plugins/remark-plantuml.js";
 import { remarkReadingTime } from "./src/plugins/remark-reading-time.mjs";
+import { remarkWikiLink } from "./src/plugins/remark-wiki-link.js";
 import { collectUsedFontCssVars } from "./src/utils/fontHelper";
 
 if (process.env.NODE_ENV === "development") {
@@ -108,8 +110,8 @@ export default defineConfig({
 
 	// 图像优化配置
 	image: {
-		// 全局响应式布局
-		layout: "constrained",
+		// 组件可自行传入 layout/widths；这里只控制 Markdown 正文图片
+		layout: "none",
 	},
 
 	integrations: [
@@ -166,7 +168,8 @@ export default defineConfig({
 					? [
 							pluginLanguageLogo({
 								color: expressiveCodeConfig.pluginLanguageLogo.color ?? "mono",
-								excludedLangs: expressiveCodeConfig.pluginLanguageLogo.excludedLangs ?? [],
+								excludedLangs:
+									expressiveCodeConfig.pluginLanguageLogo.excludedLangs ?? [],
 							}),
 						]
 					: []),
@@ -266,6 +269,7 @@ export default defineConfig({
 					: []),
 				remarkMath,
 				remarkReadingTime,
+				remarkWikiLink,
 				remarkImageGrid,
 				remarkExcerpt,
 				remarkDirective,
@@ -278,6 +282,7 @@ export default defineConfig({
 				[rehypeKatex, { katex }],
 				[rehypeCallouts, { theme: siteConfig.post.rehypeCallouts.theme }],
 				rehypeSlug,
+				rehypeCodeGroup,
 				[rehypeMermaid, mermaidConfig],
 				rehypePlantuml,
 				rehypeDiagramPanZoom,
